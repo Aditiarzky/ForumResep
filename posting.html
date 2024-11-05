@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prociono&display=swap" rel="stylesheet">
+    <script src="component.js"></script>
+  </head>
+  <body class="bg-white md:bg-[#e1e1e1]">
+    <div class="relative flex items-center justify-center lg:p-0 xl:h-fit sm:h-dvh xl:p-10 w-full">
+      <div class="w-full md:max-w-[450px] md:rounded-3xl md:h-fit flex justify-center flex-col items-center relative gap-10 bg-white p-4 md:p-14">
+        <div class="flex flex-col justify-start items-start w-full mx-auto">
+          <a href="/beranda.html">
+          <div class="flex justify-start items-center relative gap-1">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <path d="M14 18L8 12L14 6L15.4 7.4L10.8 12L15.4 16.6L14 18Z" fill="#1D1B20"></path>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-xl font-semibold text-center text-[#1d1b20]">
+              Posting Resep
+            </p>
+          </div>
+        </a>
+          <div class="pl-[8%]">
+            <p class="flex-grow-0 flex-shrink-0 text-[15px] font-medium text-center text-[#fe005c]">Detail</p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-end w-full md:w-[350px] mx-auto gap-6">
+          <div class="flex flex-col justify-center items-start w-full md:w-[350px] relative gap-1.5">
+            <div class="relative w-full mb-4">
+              <input 
+                type="text" 
+                id="Judul" 
+                class="w-full h-14 p-2.5 border-b border-[#49454f] bg-[#e6e0e9] rounded-tl rounded-tr text-[#49454f] placeholder-transparent focus:outline-none focus:bg-white peer" 
+                placeholder=" " 
+              />
+              <label for="Judul" class="absolute left-2.5 top-3 text-base text-[#49454f] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-[#49454f]">Judul</label>
+            </div>
+            <div class="relative w-full mb-4">
+              <input 
+                type="text" 
+                id="Tipe" 
+                class="w-full h-14 p-2.5 border-b border-[#49454f] bg-[#e6e0e9] rounded-tl rounded-tr text-[#49454f] placeholder-transparent focus:outline-none focus:bg-white peer" 
+                placeholder=" " 
+              />
+              <label for="Tipe" class="absolute left-2.5 top-3 text-base text-[#49454f] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-[#49454f]">Tipe</label>
+            </div>
+            <div class="relative w-full mb-4">
+              <textarea 
+                id="deskripsi" 
+                class="w-full h-28 p-2.5 border-b border-[#49454f] bg-[#e6e0e9] rounded-tl rounded-tr text-[#49454f] placeholder-transparent focus:outline-none focus:bg-white peer resize-none" 
+                placeholder=" "
+              ></textarea>
+              <label for="deskripsi" class="absolute left-2.5 top-3 text-base text-[#49454f] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-[#49454f]">Deskripsi</label>
+            </div>
+            <div class="relative w-full mb-4">
+              <textarea 
+                id="cara-masak" 
+                class="w-full h-28 p-2.5 border-b border-[#49454f] bg-[#e6e0e9] rounded-tl rounded-tr text-[#49454f] placeholder-transparent focus:outline-none focus:bg-white peer resize-none" 
+                placeholder=" "
+              ></textarea>
+              <label for="cara-masak" class="absolute left-2.5 top-3 text-base text-[#49454f] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-[#49454f]">Cara Masak</label>
+            </div>            
+            <div class="relative w-full mb-4">
+              <label for="upload" class=" text-base text-[#49454f] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-[#49454f]">Foto Postingan</label>
+              <input 
+                type="file" 
+                id="upload" 
+                class="w-full h-14 p-2.5 border-b border-[#49454f] bg-[#e6e0e9] rounded-tl rounded-tr text-[#49454f] file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:bg-[#fe005c] file:text-white placeholder-transparent focus:outline-none focus:bg-white peer" 
+                placeholder=" " 
+              />
+            </div>
+            
+          </div>
+          <div class="flex flex-col justify-start items-start w-full gap-2.5">
+            <a href="/postingbahan.html" class="flex justify-center items-center w-full p-2.5 gap-2.5 rounded-md bg-[#fe005c]">
+              <p class="text-base font-medium text-white">Selanjutnya</p>
+              <svg
+              width="8"
+              height="12"
+              viewBox="0 0 8 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <path
+                d="M1.7002 12L7.7002 6L1.7002 0L0.300195 1.4L4.9002 6L0.300195 10.6L1.7002 12Z"
+                fill="#FEF7FF"
+              ></path>
+            </svg>
+            </a>
+            <a href="/beranda.html" class="flex justify-center items-center w-full p-2.5 rounded-md border border-[#696969]">
+              <p class="text-base font-medium text-[#696969]">Batal</p>
+            </a>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </body>
+</html>

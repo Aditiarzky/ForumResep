@@ -62,3 +62,33 @@ html, body {
     background-size: contain;
     background-position: center;
 }
+.tambah-icon{
+    background-image: url(assets/add_circle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.favorit-icon{
+    background-image: url(assets/favorit.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.notif-icon{
+    background-image: url(assets/bell.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.logout-icon{
+    background-image: url(assets/log-out.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.kebijakan-icon{
+    background-image: url(assets/kebijakan.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

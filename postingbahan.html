@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prociono&display=swap" rel="stylesheet">
+    <script src="component.js"></script>
+  </head>
+  <body class="bg-white md:bg-[#e1e1e1]">
+    <div class="relative flex items-center justify-center lg:p-0 xl:h-fit sm:h-dvh xl:p-10 w-full">
+      <div class="w-full md:max-w-[450px] md:rounded-3xl md:h-fit flex justify-center flex-col items-center relative gap-10 bg-white p-4 md:p-14">
+        <div class="flex flex-col justify-start items-start w-full mx-auto">
+          <a href="/posting.html">
+          <div class="flex justify-start items-center relative gap-1">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <path d="M14 18L8 12L14 6L15.4 7.4L10.8 12L15.4 16.6L14 18Z" fill="#1D1B20"></path>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-xl font-semibold text-center text-[#1d1b20]">
+              Posting Resep
+            </p>
+          </div>
+        </a>
+          <div class="pl-[8%]">
+            <p class="flex-grow-0 flex-shrink-0 text-[15px] font-medium text-center text-[#fe005c]">Detail / Bahan-bahan</p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-center w-full md:w-[350px] mx-auto gap-6">
+          
+          <div class="flex flex-col justify-start items-end w-[282px] gap-[18px]">
+            <div
+              class="flex flex-col justify-start items-end self-stretch flex-grow-0 flex-shrink-0 relative gap-1"
+            >
+              <div
+                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 h-[55px] relative rounded-tl rounded-tr"
+              >
+                <div
+                  class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5 rounded-tl rounded-tr bg-[#e6e0e9]"
+                >
+                  <div
+                    class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 pr-4 py-1 rounded-tl rounded-tr"
+                  >
+                    <div
+                      class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 h-12 w-12 gap-2.5"
+                    >
+                      <div
+                        class="flex justify-center items-center flex-grow-0 flex-shrink-0 overflow-hidden gap-2.5 rounded-[100px]"
+                      >
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 p-2"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+                            preserveAspectRatio="xMidYMid meet"
+                          >
+                            <path
+                              d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
+                              fill="#49454F"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col justify-center items-start flex-grow h-12 py-1">
+                      <div class="flex flex-col justify-start items-start self-stretch">
+                        <input 
+                        type="text" 
+                        id="cari" 
+                        class="w-full h-14 p-2.5 bg-[#e6e0e9] rounded-tl rounded-tr text-[#49454f] focus:outline-none" 
+                        placeholder="Cari/tambah bahan" 
+                      />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <svg
+                  width="282"
+                  height="1"
+                  viewBox="0 0 282 1"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="self-stretch flex-grow-0 flex-shrink-0"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  <line y1="0.5" x2="282" y2="0.5" stroke="#1D1B20"></line>
+                </svg>
+              </div>
+              <div
+                class="self-stretch flex-grow-0 flex-shrink-0 h-[154px] relative overflow-hidden rounded-bl-[5px] rounded-br-[5px] bg-[#e1e1e1]"
+                style="box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.25);"
+              >
+                <div class="flex flex-col justify-start items-start w-[280px] absolute left-0 top-0 gap-1.5">
+                  <div
+                    class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 relative p-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                  >
+                    <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-black">
+                      Bawang Merah
+                    </p>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+                      preserveAspectRatio="xMidYMid meet"
+                    >
+                      <path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="#1D1B20"></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 relative p-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                  >
+                    <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-black">Kunyit</p>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+                      preserveAspectRatio="xMidYMid meet"
+                    >
+                      <path d="M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z" fill="#1D1B20"></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] p-2.5 bg-[#c9c9c9] border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                  >
+                    <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-black">
+                      Tambahkan bahan baru
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative"
+            >
+              <p
+                class="self-stretch flex-grow-0 flex-shrink-0 w-[282px] text-base font-medium text-left text-black"
+              >
+                Daftar Bahan
+              </p>
+              <div
+                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[11px]"
+              >
+                <div
+                  class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                >
+                  <div class="flex flex-col justify-center items-start flex-grow">
+                    <div
+                      class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 relative"
+                    >
+                      <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-black">
+                        Bawang Merah
+                      </p>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+                        preserveAspectRatio="xMidYMid meet"
+                      >
+                        <path d="M6 13V11H18V13H6Z" fill="#1D1B20"></path>
+                      </svg>
+                    </div>
+                    <div
+                      class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2 p-[5px] bg-[#e1e1e1]"
+                    >
+                      <p class="flex-grow-0 flex-shrink-0 text-xs font-medium text-left text-[#1d1b20]">
+                        Jumlah
+                      </p>
+                      <div class="flex flex-col justify-start items-start self-stretch">
+                        <input
+                          type="number"
+                          placeholder="Contoh: 1"
+                          class="w-full p-2 text-xs bg-white border border-[#c9c9c9] rounded"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2 p-[5px] bg-[#e1e1e1]"
+                    >
+                    <p class="flex-grow-0 flex-shrink-0 text-xs font-medium text-left text-[#1d1b20]">
+                      Jumlah
+                    </p>
+                    <div class="flex flex-col justify-start items-start self-stretch">
+                      <input
+                        type="text"
+                        placeholder="Contoh: butir, buah, sendok teh dll"
+                        class="w-full p-2 text-xs bg-white border border-[#c9c9c9] rounded"
+                      />
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                >
+                  <div class="flex flex-col justify-center items-start flex-grow">
+                    <div
+                      class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 relative"
+                    >
+                      <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-black">Kunyit</p>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+                        preserveAspectRatio="xMidYMid meet"
+                      >
+                        <path d="M6 13V11H18V13H6Z" fill="#1D1B20"></path>
+                      </svg>
+                    </div>
+                    <div
+                      class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2 p-[5px] bg-[#e1e1e1]"
+                    >
+                      <p class="flex-grow-0 flex-shrink-0 text-xs font-medium text-left text-[#1d1b20]">
+                        Jumlah
+                      </p>
+                      <div class="flex flex-col justify-start items-start self-stretch">
+                        <input
+                          type="number"
+                          placeholder="Contoh: 1"
+                          class="w-full p-2 text-xs bg-white border border-[#c9c9c9] rounded"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2 p-[5px] bg-[#e1e1e1]"
+                    >
+                    <p class="flex-grow-0 flex-shrink-0 text-xs font-medium text-left text-[#1d1b20]">
+                      Jumlah
+                    </p>
+                    <div class="flex flex-col justify-start items-start self-stretch">
+                      <input
+                        type="text"
+                        placeholder="Contoh: butir, buah, sendok teh dll"
+                        class="w-full p-2 text-xs bg-white border border-[#c9c9c9] rounded"
+                      />
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="flex flex-col justify-start items-start w-full gap-2.5">
+            <a href="/beranda.html" class="flex justify-center items-center w-full p-2.5 gap-2.5 rounded-md bg-[#fe005c]">
+              <p class="text-base font-medium text-white">Posting</p>
+            </a>
+            <a href="/beranda.html" class="flex justify-center items-center w-full p-2.5 rounded-md border border-[#696969]">
+              <p class="text-base font-medium text-[#696969]">Batal</p>
+            </a>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </body>
+</html>

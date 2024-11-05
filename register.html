@@ -12,12 +12,12 @@
     <script src="component.js"></script>
   </head>
   <body class="bg-[#e1e1e1]">
-    <div class="relative flex items-center justify-center w-full h-screen">
+    <div class="relative flex items-center justify-center lg:p-0 xl:h-fit xl:p-10 h-svh w-full">
       <div class="w-full md:max-w-[402px] h-svh md:rounded-3xl md:h-fit flex justify-center flex-col items-center relative overflow-hidden gap-10 bg-white p-4 md:p-14">
         <div class="flex flex-col justify-start items-center w-full md:w-[104px] mx-auto">
           <span class="icon-apl w-32 h-20"></span>
         </div>
-        <div class="flex flex-col justify-start items-end w-full md:w-[281px] mx-auto gap-6">
+        <div class="flex flex-col justify-center items-end w-full md:w-[281px] mx-auto gap-6">
           <div class="flex flex-col justify-center items-start w-full md:w-[281px] relative gap-1.5">
             <div class="relative w-full mb-4">
               <input 
@@ -56,108 +56,28 @@
               />
               <label for="password" class="absolute left-2.5 top-3 text-base text-[#49454f] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-[#49454f]">Password</label>
             </div>  
+
+            <div class="relative w-full mb-4">
+              <label for="upload" class=" text-base text-[#49454f] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-[#49454f]">Upload Photo Profile</label>
+              <input 
+                type="file" 
+                id="upload" 
+                class="w-full h-14 p-2.5 border-b border-[#49454f] bg-[#e6e0e9] rounded-tl rounded-tr text-[#49454f] file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:bg-[#fe005c] file:text-white placeholder-transparent focus:outline-none focus:bg-white peer" 
+                placeholder=" " 
+              />
+            </div>
+            
           </div>
           <div class="flex flex-col justify-start items-start w-full gap-2.5">
-            <a href="/beranda.html" class="flex justify-center items-center w-full p-2.5 rounded-md bg-[#fe005c]">
-              <p class="text-base font-medium text-white">Login</p>
+            <a href="/login.html" class="flex justify-center items-center w-full p-2.5 rounded-md bg-[#fe005c]">
+              <p class="text-base font-medium text-white">Register</p>
             </a>
-            <a href="/beranda.html" class="flex justify-center items-center w-full p-2.5 rounded-md border border-[#696969]">
-              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
-                <path d="M14.5805 6.92562C14.6521 7.30422 14.7033 7.68281 14.7033 8.17391C14.7033 12.4611 11.8281 15.5 7.5 15.5C3.35609 15.5 0 12.1439 0 8C0 3.85605 3.35609 0.5 7.5 0.5C9.52594 0.5 11.2142 1.23668 12.5239 2.46453L10.4877 4.41883C9.93516 3.88676 8.96316 3.26262 7.5 3.26262C4.94203 3.26262 2.85469 5.38062 2.85469 8C2.85469 10.6194 4.94203 12.7374 7.5 12.7374C10.4672 12.7374 11.5825 10.5989 11.7564 9.50406H7.5V6.92559H14.5805V6.92562ZM21.8229 7.17707V5H19.6354V7.17707H17.4583V9.36461H19.6354V11.5417H21.8229V9.36461H24V7.17707H21.8229Z" fill="#4A0CA6"></path>
-              </svg>
-              <p class="text-base font-medium text-[#4a0ca6]">Login dengan Google</p>
-            </a>
-            <a href="/register.html" class="flex justify-center items-center w-full p-2.5 rounded-md border border-[#696969]">
-              <p class="text-base font-medium text-[#696969]">Register</p>
+            <a href="/login.html" class="flex justify-center items-center w-full p-2.5 rounded-md border border-[#696969]">
+              <p class="text-base font-medium text-[#696969]">Sudah punya akun?</p>
             </a>
           </div>
         </div>
       </div>      
     </div>
-    <script>
-        // Data fiktif resep dalam array
-        const resepData = [
-          {
-            nama: "Ayam Goreng Krispi ala Rumahan",
-            deskripsi: "Ayam goreng krispi ini punya rasa...",
-            penulis: "Kujou Yuki",
-            waktu: "15 menit",
-            rating: 8.2,
-            komen: 100,
-            simpan: "1k",
-            gambar: "assets/foto-resep.png",
-            fotoProfil: "assets/profile.svg"
-          },
-          {
-            nama: "Nasi Goreng Kampung",
-            deskripsi: "Nasi goreng kampung dengan cita rasa...",
-            penulis: "Aris Tetsu",
-            waktu: "10 menit",
-            rating: 9.1,
-            komen: 75,
-            simpan: "900",
-            gambar: "assets/foto-resep.png",
-            fotoProfil: "assets/profile.svg"
-          },
-          {
-            nama: "Pancake Cokelat Lezat",
-            deskripsi: "Pancake cokelat dengan taburan...",
-            penulis: "Risa Amaya",
-            waktu: "20 menit",
-            rating: 7.8,
-            komen: 45,
-            simpan: "500",
-            gambar: "assets/foto-resep.png",
-            fotoProfil: "assets/profile.svg"
-          }
-        ];
-      
-        // Fungsi untuk membuat elemen resep
-        function tampilkanResep(resep) {
-          return `
-            <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 max-w-[562px] w-full gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]">
-              <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
-                <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
-                  <img src="${resep.fotoProfil}" class="w-7 h-7 rounded-[50px] object-cover" />
-                </div>
-                <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[68px] relative gap-px">
-                  <p class="text-[13px] font-medium text-left text-[#1d1b20]">${resep.penulis}</p>
-                  <p class="text-[10px] font-light text-left text-black/80">${resep.waktu}</p>
-                </div>
-              </div>
-              <div class="flex flex-col justify-start items-start self-stretch gap-[5px]">
-                <img src="${resep.gambar}" class="self-stretch h-[220px] object-cover" />
-                <div class="flex flex-col justify-start items-start self-stretch gap-0.5">
-                  <p class="text-xl font-semibold text-left">${resep.nama}</p>
-                  <p class="font-medium text-left">
-                    <span class="text-sm font-medium text-left text-[#1d1b20]">${resep.deskripsi}</span>
-                    <span class="text-[10px] font-medium text-left text-[#696969]">lihat selengkapnya</span>
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-between items-center self-stretch">
-                <div class="flex justify-center items-center gap-0.5">
-                  <div class="rating w-5 h-5"></div>
-                  <p class="text-xs text-left text-[#696969]">${resep.rating}</p>
-                </div>
-                <div class="flex justify-center items-center gap-0.5">
-                  <div class="komen w-5 h-5"></div>
-                  <p class="text-xs text-left text-[#696969]">${resep.komen}</p>
-                </div>
-                <div class="flex justify-center items-center gap-0.5">
-                  <div class="simpan w-5 h-5"></div>
-                  <p class="text-xs text-left text-[#696969]">${resep.simpan}</p>
-                </div>
-              </div>
-            </div>
-          `;
-        }
-      
-        // Loop untuk menambahkan setiap resep ke dalam HTML
-        const resepContainer = document.getElementById("resepContainer");
-        resepData.forEach((resep) => {
-          resepContainer.innerHTML += tampilkanResep(resep);
-        });
-      </script>
   </body>
 </html>
