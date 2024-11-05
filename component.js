@@ -156,7 +156,7 @@ try {
             <div class="flex justify-center items-center w-full">
               <div class="flex items-center p-2 w-full justify-center">
                 <span alt="Profile" class="profile w-10 h-10 rounded-full mr-3 object-cover"></span>
-                <a href="" class="flex items-center max-w-96 w-full border border-[#1d1b20] rounded-lg p-2">
+                <a href="/posting.html" class="flex items-center max-w-96 w-full border border-[#1d1b20] rounded-lg p-2">
                   Mau sharing resep?
                 </a>
               </div>
