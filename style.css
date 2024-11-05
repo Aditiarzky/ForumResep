@@ -1,0 +1,64 @@
+html, body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-apl{
+    background-image: url(assets/icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.burger-icon{
+    background-image: url(assets/burger.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.login-icon{
+    background-image: url(assets/log-in.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.cari-icon{
+    background-image: url(assets/search.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.rating{
+    background-image: url(assets/rating.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.komen{
+    background-image: url(assets/komen.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.simpan{
+    background-image: url(assets/simpan.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.profile{
+    background-image: url(assets/profile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.foto-resep{
+    background-image: url(assets/simpan.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
