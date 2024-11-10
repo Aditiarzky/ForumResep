@@ -57,6 +57,7 @@ try {
               <div class="flex icon-apl w-16 h-14 flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"></div>
               <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
                 <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
+                  <a href="/pages/beranda.html">
                   <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px] rounded-[5px] bg-[#fe005c]">
                     <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-center text-white">Beranda</p>
                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-[17px] h-4 relative" preserveAspectRatio="none">
@@ -72,6 +73,7 @@ try {
                       </defs>
                     </svg>
                   </div>
+                  </a>
                   <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px]">
                     <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-center text-[#1d1b20]">Resep Disimpan</p>
                     <span class="simpan h-4 w-4"></span>
@@ -142,13 +144,13 @@ try {
                 <div
                 class="cari-icon md:hidden block w-[23px]  h-14 "
               ></div>
-                <a href="/login.html"><div
+                <a href="posting.html"><div
                 class="tambah-icon w-[23px]  h-14 "
               ></div></a>
-                <a href="/login.html"><div
+                <a href="login.html"><div
                 class="notif-icon w-[23px]  h-14 "
               ></div></a>
-              <a href="/login.html" class="flex justify-center items-center">
+              <a href="profil.html" class="flex justify-center items-center">
                 <div alt="Profile" class="profile w-8  h-8 rounded-full mr-3 object-cover"></div>
               </a>
               </div>
@@ -156,7 +158,7 @@ try {
             <div class="flex justify-center items-center w-full">
               <div class="flex items-center p-2 w-full justify-center">
                 <span alt="Profile" class="profile w-10 h-10 rounded-full mr-3 object-cover"></span>
-                <a href="/posting.html" class="flex items-center max-w-96 w-full border border-[#1d1b20] rounded-lg p-2">
+                <a href="posting.html" class="flex items-center max-w-96 w-full border border-[#1d1b20] rounded-lg p-2">
                   Mau sharing resep?
                 </a>
               </div>
