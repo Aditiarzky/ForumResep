@@ -92,3 +92,27 @@ html, body {
     background-size: contain;
     background-position: center;
 }
+.arrow-kiri{
+    background-image: url(assets/arrow-kiri.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.titik-tiga{
+    background-image: url(assets/titiktiga.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.edit-icon{
+    background-image: url(assets/edit.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.hapus-icon{
+    background-image: url(assets/delete.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

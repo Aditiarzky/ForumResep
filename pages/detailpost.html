@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prociono&display=swap" rel="stylesheet">
+    <script src="../component.js"></script>
+  </head>
+  <body class="bg-[#e1e1e1]">
+    <div class="relative bg-[#e1e1e1]">
+        <menu id="menu-ratingulasan" class="fixed h-dvh w-full bg-[#111827]/50 z-50 flex hidden justify-center items-start overflow-scroll">
+            <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 md:w-[480px] w-full bg-[#e1e1e1] gap-1.5">
+                <div
+                  class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 h-16 gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]"
+                >
+                  <a href="#" id="hidden-ratingulasan" class="flex items-center gap-1 text-xl">
+                    <span class="arrow-kiri h-3 w-3"></span>
+                    <p>Rating & Ulasan</p>
+                  </a>
+                </div>
+                <div
+                  class="flex flex-col justify-start p-2 items-start self-stretch flex-grow-0 flex-shrink-0 gap-1.5"
+                >
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]"
+                  >
+                    <div
+                      class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 relative"
+                    >
+                      <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+                        <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                          <img
+                            src="../assets/profile.svg"
+                            class="w-7 h-7 absolute left-[-1px] top-[-1px] rounded-[50px] object-cover"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-px"
+                        >
+                          <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#1d1b20]">
+                            Riko Setiawan
+                          </p>
+                          <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                            3 menit
+                          </p>
+                        </div>
+                      </div>
+                      <span class="titik-tiga h-5 w-5"></span>
+                    </div>
+                    <div
+                      class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[5px]"
+                    >
+                      <img
+                        src="../assets/foto-resep.png"
+                        class="self-stretch flex-grow-0 flex-shrink-0 h-[94px] object-cover"
+                      />
+                      <p class="flex-grow-0 flex-shrink-0 text-xl font-semibold text-left">
+                        Rendang Daging Khas Padang
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col justify-end items-end self-stretch flex-grow-0 flex-shrink-0 gap-2.5 p-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]">
+                    <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
+                      <div class="flex flex-col justify-start items-start flex-grow gap-[5px]">
+                        
+                        <!-- Input Rating -->
+                        <div class="flex items-center gap-[5px] p-[5px] rounded-[5px] bg-[#e1e1e1] border border-[#c9c9c9]">
+                            <select id="rating" class="p-1 border-0 text-[#1d1b20] rounded bg-[#e1e1e1] focus:outline-none">
+                              <option value="1">⭐1</option>
+                              <option value="2">⭐2</option>
+                              <option value="3">⭐3</option>
+                              <option value="4">⭐4</option>
+                              <option value="5">⭐5</option>
+                              <option value="6">⭐6</option>
+                              <option value="7">⭐7</option>
+                              <option value="8">⭐8</option>
+                              <option value="9">⭐9</option>
+                              <option value="10">⭐10</option>
+                            </select>
+                          </div>
+                
+                        <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative overflow-hidden gap-2.5 p-2.5 rounded-xl border border-[#1d1b20]">
+                          <textarea placeholder="Masukkan ulasan..." class="w-full h-[70px] p-2 text-base text-[#1d1b20] focus:outline-none rounded resize-none"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button class="flex justify-center items-center gap-2.5 px-4 py-2 rounded-[5px] bg-[#fe005c] text-white text-sm font-medium">Kirim</button>
+                  </div>
+
+                  <!-- setelah kirim rating ulasan -->
+
+                  <div
+                    class="hidden flex-col justify-end items-end self-stretch flex-grow-0 flex-shrink-0 gap-2.5 p-2.5 rounded-[5px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                    style="box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.25);"
+                  >
+                    <div
+                      class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
+                    >
+                      <div
+                        class="flex-grow-0 flex-shrink-0 w-[35px] h-[35px] relative overflow-hidden rounded-[100px] bg-[#eaddff]"
+                      ></div>
+                      <div class="flex flex-col justify-center items-start flex-grow relative gap-[5px]">
+                        <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0">
+                          <div
+                            class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-28 relative gap-px"
+                          >
+                            <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#1d1b20]">
+                              Albertus Kelvin
+                            </p>
+                            <div
+                              class="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[100px] relative gap-2.5"
+                            >
+                              <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                                ⭐ 9
+                              </p>
+                              <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                                01/9/2024
+                              </p>
+                            </div>
+                          </div>
+                          <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+                            <a href="" class="edit-icon h-6 w-6"></a>
+                            <a href="" class="hapus-icon h-6 w-6"></a>
+                          </div>
+                        </div>
+                        <p
+                          class="self-stretch flex-grow-0 flex-shrink-0 w-[301px] text-xs font-light text-left text-black"
+                        >
+                          Saya merasa resep ini terlalu manis. Bagaimana cara mengurangi rasa manisnya?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                <div
+                  class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative"
+                >
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                  >
+                    <p
+                      class="self-stretch font-bold flex-grow-0 flex-shrink-0 text-xs text-left text-black"
+                    >
+                      5 Rating & Ulasan
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                  >
+                    <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
+                      <div
+                        class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                      >
+                        <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                          <img
+                            src="image-1.png"
+                            class="w-7 h-7 absolute left-[-1px] top-[-1px] rounded-[50px] object-cover"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-28 relative gap-px"
+                        >
+                          <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#1d1b20]">
+                            Dibya Setiaji
+                          </p>
+                          <div
+                            class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                          >
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              ⭐ 9
+                            </p>
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              02/2/2024
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p
+                      class="self-stretch flex-grow-0 flex-shrink-0 text-xs font-light text-left text-black"
+                    >
+                      Dengan waktu persiapan dan memasak yang cukup efisien, resep ini ideal bagi mereka yang
+                      sibuk namun tetap ingin menikmati masakan rumahan yang lezat.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                  >
+                    <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
+                      <div
+                        class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                      >
+                        <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                          <img
+                            src="image-1.png"
+                            class="w-7 h-7 absolute left-[-1px] top-[-1px] rounded-[50px] object-cover"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-28 relative gap-px"
+                        >
+                          <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#1d1b20]">
+                            Suliaswati
+                          </p>
+                          <div
+                            class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                          >
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              ⭐ 9
+                            </p>
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              21/11/2024
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p
+                      class="self-stretch flex-grow-0 flex-shrink-0 text-xs font-light text-left text-black"
+                    >
+                      Takaran bumbu pada resep ini sangat pas. Tidak ada rasa yang terlalu dominan, sehingga
+                      menghasilkan keseimbangan rasa yang harmonis dan lezat.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                  >
+                    <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
+                      <div
+                        class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                      >
+                        <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                          <img
+                            src="image-1.png"
+                            class="w-7 h-7 absolute left-[-1px] top-[-1px] rounded-[50px] object-cover"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-28 relative gap-px"
+                        >
+                          <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#1d1b20]">
+                            Niko
+                          </p>
+                          <div
+                            class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                          >
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              ⭐ 9
+                            </p>
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              01/7/2024
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p
+                      class="self-stretch flex-grow-0 flex-shrink-0 text-xs font-light text-left text-black"
+                    >
+                      Resep ini menyediakan tips teknik memasak khusus yang membuat hasil akhir lebih sempurna.
+                      Setiap teknik dijelaskan secara rinci, seperti cara menggoreng agar renyah atau memanggang
+                      agar tekstur tetap lembut.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                  >
+                    <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
+                      <div
+                        class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                      >
+                        <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                          <img
+                            src="image-1.png"
+                            class="w-7 h-7 absolute left-[-1px] top-[-1px] rounded-[50px] object-cover"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-28 relative gap-px"
+                        >
+                          <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#1d1b20]">
+                            Denis
+                          </p>
+                          <div
+                            class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                          >
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              ⭐ 9
+                            </p>
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              05/9/2024
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p
+                      class="self-stretch flex-grow-0 flex-shrink-0 text-xs font-light text-left text-black"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua.
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                  >
+                    <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
+                      <div
+                        class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                      >
+                        <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                          <img
+                            src="image-1.png"
+                            class="w-7 h-7 absolute left-[-1px] top-[-1px] rounded-[50px] object-cover"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-28 relative gap-px"
+                        >
+                          <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#1d1b20]">
+                            Riko Setiabudi
+                          </p>
+                          <div
+                            class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                          >
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              ⭐ 9
+                            </p>
+                            <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                              01/9/2024
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p
+                      class="self-stretch flex-grow-0 flex-shrink-0 text-xs font-light text-left text-black"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua.
+                    </p>
+                  </div>
+                  <p class="flex-grow-0 flex-shrink-0 text-base text-left text-[#c9c9c9]">
+                    Tidak ada ulasan lagi...
+                  </p>
+                </div>
+                </div>
+              </div>
+        </menu>
+      <div class="w-full mx-auto ">
+        <aside id="sidebar-login" class="fixed z-50"></aside>
+        <nav id="navbar-nofilter" class="flex fixed z-10 w-full flex-col justify-start items-start self-stretch  gap-[22px] px-[15px] py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"></nav>
+        <div class="flex flex-col pt-20 mx-auto justify-start items-center w-full p-5 left-0 top-0 gap-1.5">
+            <div
+                class="flex flex-col justify-start items-start md:w-[480px] w-full gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]"
+                >
+                <div class="flex justify-between items-center self-stretch  relative">
+                    <div class="flex justify-start items-center  relative gap-2.5">
+                    <div class=" w-7 h-7 relative">
+                        <img
+                        src="image.png"
+                        class="w-7 h-7 absolute left-[-1px] top-[-1px] rounded-[50px] object-cover"
+                        />
+                    </div>
+                    <div
+                        class="flex flex-col justify-start items-start  relative gap-px"
+                    >
+                        <p class=" text-[13px] font-medium text-left text-[#1d1b20]">
+                        Albertus Kelvin
+                        </p>
+                        <p class=" text-[10px] font-light text-left text-black/80">
+                        54 menit
+                        </p>
+                    </div>
+                    </div>
+                    <span class="titik-tiga w-6 h-6"></span>
+                </div>
+                <div class="flex justify-between items-center self-stretch ">
+                    <div class="flex justify-start items-center self-stretch  gap-2.5">
+                    <div class="flex justify-center items-center gap-0.5">
+                        <div class="rating w-5 h-5"></div>
+                        <p class="text-xs text-left text-[#696969]">7.7</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-0.5">
+                        <div class="komen w-5 h-5"></div>
+                        <p class="text-xs text-left text-[#696969]">43</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-0.5">
+                        <div class="simpan w-5 h-5"></div>
+                        <p class="text-xs text-left text-[#696969]">50</p>
+                    </div>
+                    </div>
+                    <div class="flex justify-start items-center  gap-2.5">
+                    <a href="#" id="ratingulasan-btn"
+                        class="flex justify-start items-end  gap-0.5 p-2.5 rounded-[5px] bg-[#e1e1e1] border border-[#c9c9c9]"
+                    >
+                        <div class="favorit-icon h-5 w-5" ></div>
+                    </a>
+                    <a href="#"
+                        class="flex justify-start items-end  gap-0.5 p-2.5 rounded-[5px] bg-[#e1e1e1] border border-[#c9c9c9]"
+                    >
+                        <div class="komen h-5 w-5" ></div>
+                    </a>
+                    <a href="#"
+                        class="flex justify-start items-end gap-0.5 p-2.5 rounded-[5px] bg-[#e1e1e1] border border-[#c9c9c9]"
+                    >
+                        <div class="simpan h-5 w-5" ></div>
+                    </a>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col justify-start items-start self-stretch  relative gap-2.5"
+                >
+                    <img src="image-3.jpeg" class="self-stretch  object-cover" />
+                    <div
+                    class="flex flex-col justify-start items-start self-stretch  relative gap-2.5"
+                    >
+                    <p class=" text-xl font-semibold text-left bg-clip-text text-transparent bg-gradient-to-r from-[#1d1b20] to-[#FE005C]">
+                        Pisang Goreng Karamel Renyah
+                    </p>
+                    <p
+                        class="self-stretch text-sm font-medium text-left text-[]"
+                    >
+                        Pisang goreng yang dibalut dengan karamel renyah memberikan perpaduan rasa manis dan tekstur
+                        garing yang lezat. Camilan ini sempurna untuk menemani sore Anda bersama secangkir teh
+                        hangat.
+                    </p>
+                    <p
+                        class="self-stretch text-sm font-medium text-left text-[#4a0ca6]"
+                    >
+                        #snack
+                    </p>
+                    </div>
+                    <div
+                    class="flex flex-col justify-start items-start self-stretch  gap-[5px]"
+                    >
+                    <div
+                        class="flex justify-start items-start self-stretch  relative py-2.5 border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                    >
+                        <p class=" text-xl font-semibold text-left bg-clip-text text-transparent bg-gradient-to-r from-[#1d1b20] to-[#FE005C]">
+                            Bahan-Bahan</p>
+                    </div>
+                    <div
+                        class="flex flex-col justify-start items-start self-stretch  gap-0.5"
+                    >
+                        <div
+                        class="flex flex-col justify-start items-start self-stretch  relative px-[5px]"
+                        >
+                        <p class=" text-sm font-medium text-left text-[#1d1b20]">
+                            buah pisang kepok atau pisang raja
+                        </p>
+                        <div class="flex justify-start items-center  relative gap-2.5">
+                            <p class=" text-xs text-left text-[#1d1b20]">5</p>
+                            <p class=" text-xs text-left text-[#1d1b20]">Buah</p>
+                        </div>
+                        </div>
+                        <div
+                        class="flex flex-col justify-start items-start self-stretch  relative px-[5px]"
+                        >
+                        <p class=" text-sm font-medium text-left text-[#1d1b20]">
+                            gram tepung terigu
+                        </p>
+                        <div class="flex justify-start items-center  relative gap-2.5">
+                            <p class=" text-xs text-left text-[#1d1b20]">100</p>
+                            <p class=" text-xs text-left text-[#1d1b20]">Gram</p>
+                        </div>
+                        </div>
+                        <div
+                        class="flex flex-col justify-start items-start self-stretch  relative px-[5px]"
+                        >
+                        <p class=" text-sm font-medium text-left text-[#1d1b20]">
+                            gram tepung beras
+                        </p>
+                        <div class="flex justify-start items-center  relative gap-2.5">
+                            <p class=" text-xs text-left text-[#1d1b20]">50</p>
+                            <p class=" text-xs text-left text-[#1d1b20]">Gram</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col justify-start items-start self-stretch  relative px-[5px]"
+                    >
+                        <p class=" text-sm font-medium text-left text-[#1d1b20]">
+                        sendok teh garam
+                        </p>
+                        <div class="flex justify-start items-center  relative gap-2.5">
+                        <p class=" text-xs text-left text-[#1d1b20]">2</p>
+                        <p class=" text-xs text-left text-[#1d1b20]">sendok</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col justify-start items-start self-stretch  relative px-[5px]"
+                    >
+                        <p class=" text-sm font-medium text-left text-[#1d1b20]">
+                        gram gula pasir
+                        </p>
+                        <div class="flex justify-start items-center  relative gap-2.5">
+                        <p class=" text-xs text-left text-[#1d1b20]">100</p>
+                        <p class=" text-xs text-left text-[#1d1b20]">Gram</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div
+                    class="flex flex-col justify-start items-start self-stretch  relative gap-[5px]"
+                    >
+                    <div
+                        class="flex justify-start items-start self-stretch  relative py-2.5 border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                    >
+                        <p class=" text-xl font-semibold text-left bg-clip-text text-transparent bg-gradient-to-r from-[#1d1b20] to-[#FE005C]">Cara Memasak</p>
+                    </div>
+                    <p
+                        class="self-stretch text-sm font-medium text-left text-[#1d1b20]"
+                    >
+                        <span
+                        class="self-stretch text-sm font-medium text-left text-[#1d1b20]"
+                        >Buat Adonan Tepung: Campurkan tepung, gula, dan garam, lalu tuangkan air sedikit demi
+                        sedikit sambil diaduk sampai adonan agak kental.</span
+                        ><br /><span
+                        class="self-stretch text-sm font-medium text-left text-[#1d1b20]"
+                        >Goreng Pisang: Celupkan potongan pisang ke dalam adonan, lalu goreng dalam minyak panas
+                        hingga kuning keemasan. Tiriskan.</span
+                        ><br /><span
+                        class="self-stretch text-sm font-medium text-left text-[#1d1b20]"
+                        >Buat Karamel: Panaskan gula dan 3 sendok makan air di wajan kecil hingga gula larut dan
+                        berubah warna menjadi kecokelatan.</span
+                        ><br /><span
+                        class="self-stretch text-sm font-medium text-left text-[#1d1b20]"
+                        >Lapisi Pisang dengan Karamel: Celupkan pisang goreng ke dalam karamel panas, angkat, dan
+                        diamkan sampai karamel mengeras.</span
+                        >
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("ratingulasan-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        var menuRatingUlasan = document.getElementById("menu-ratingulasan");
+        menuRatingUlasan.classList.toggle("hidden");
+      });
+      document.getElementById("hidden-ratingulasan").addEventListener("click", function(event) {
+        event.preventDefault();
+        var menuRatingUlasan = document.getElementById("menu-ratingulasan");
+        menuRatingUlasan.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -57,8 +57,7 @@ try {
               <div class="flex icon-apl w-16 h-14 flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"></div>
               <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
                 <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
-                  <a href="/pages/beranda.html">
-                  <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px] rounded-[5px] bg-[#fe005c]">
+                  <a href="/pages/beranda.html" class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px] rounded-[5px] bg-[#fe005c]">
                     <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-center text-white">Beranda</p>
                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-[17px] h-4 relative" preserveAspectRatio="none">
                       <g clip-path="url(#clip0_95_550)">
@@ -72,7 +71,7 @@ try {
                         </clipPath>
                       </defs>
                     </svg>
-                  </div>
+                  </a>
                   </a>
                   <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px]">
                     <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-center text-[#1d1b20]">Resep Disimpan</p>
@@ -206,6 +205,61 @@ try {
 }
 
 try {
+    function tampilkanNavbarNoFilter() {
+        const navbarNF = `
+          <div
+          class="flex flex-col mx-auto justify-center items-center w-full left-0 top-0 gap-1.5"
+        >
+            <div class="container mx-auto flex justify-between self-stretch flex-grow-0 flex-shrink-0">
+              <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2.5">
+                <div
+                  class="burger-icon w-[23px] xl:hidden h-14 flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1"
+                >
+                </div>
+                <div
+                  class="icon-apl w-16 h-14 flex xl:hidden flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"
+                >
+                </div>
+              </div>
+              <div class="relative w-96 hidden md:block">
+                <input 
+                    type="text" 
+                    placeholder="Cari resep..." 
+                    class="w-full py-2 pl-10 pr-4 border-b border-gray-300 focus:outline-none"
+                />
+                <div
+                  class="cari-icon w-[23px] h-14 absolute left-2 top-[1.2rem] transform -translate-y-1/2 text-gray-500"
+                ></div>
+              </div>
+              <div class="flex gap-2">
+                <div
+                class="cari-icon md:hidden block w-[23px]  h-14 "
+              ></div>
+                <a href="posting.html"><div
+                class="tambah-icon w-[23px]  h-14 "
+              ></div></a>
+                <a href="login.html"><div
+                class="notif-icon w-[23px]  h-14 "
+              ></div></a>
+              <a href="profil.html" class="flex justify-center items-center">
+                <div alt="Profile" class="profile w-8  h-8 rounded-full mr-3 object-cover"></div>
+              </a>
+              </div>
+            </div>
+        `;
+      
+        const navNFContainer = document.getElementById("navbar-nofilter");
+        if (navNFContainer) {
+          navNFContainer.innerHTML = navbarNF;
+        }
+      }
+      
+     
+} catch (error) {
+    console.log(error)
+}
+
+try {
     function tampilkanNavbar() {
         const navbar = `
           <div
@@ -236,7 +290,7 @@ try {
                 <div
                 class="cari-icon md:hidden block w-[23px]  h-14 "
               ></div>
-                <a href="/login.html"><div
+                <a href="/pages/login.html"><div
                 class="login-icon w-[23px]  h-14 "
               ></div></a>
               </div>
@@ -283,9 +337,16 @@ try {
     console.log(error)
 }
 
+try {
+
+} catch (error) {
+  console.log(error)
+}
+
 window.onload = () =>{
   tampilkanSidebar();
   tampilkanNavbarLogin();
   tampilkanNavbar();
+  tampilkanNavbarNoFilter();
   tampilkanSidebarLogin();
 }
