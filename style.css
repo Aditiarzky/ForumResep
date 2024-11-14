@@ -116,3 +116,8 @@ html, body {
     background-size: contain;
     background-position: center;
 }
+.up-icon{
+    -webkit-mask-image: url('assets/up-icon.svg');
+    mask-image: url('assets/up-icon.svg');
+    mask-size: contain;
+}

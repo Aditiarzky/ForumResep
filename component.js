@@ -1,3 +1,62 @@
+const komentarData = [
+  {
+    id: 1,
+    nama: "Dibya Setiaji",
+    tanggal: "02/02/2024",
+    isi: "Resep ini sangat cocok untuk keluarga saya. Terima kasih sudah berbagi!",
+    balasKomentar: {
+      nama: "",
+      isi: ""
+    },
+    likes: 8
+  },
+  {
+    id: 2,
+    nama: "Ardi Nugraha",
+    tanggal: "01/30/2024",
+    isi: "Baru pertama kali mencoba resep ini, dan hasilnya sangat memuaskan.",
+    balasKomentar: {
+      nama: "",
+      isi: ""
+    },
+    likes: 15
+  },
+  {
+    id: 3,
+    nama: "Lia Marlina",
+    tanggal: "01/25/2024",
+    isi: "Senang mendengar kamu berhasil! Memasak memang seru kalau hasilnya enak.",
+    balasKomentar: {
+      nama: "@Ardi Nugraha",
+      isi: "Baru pertama kali mencoba resep ini, dan hasilnya sangat memuaskan."
+    },
+    likes: 12
+  },
+  {
+    id: 4,
+    nama: "Wulan Widya",
+    tanggal: "01/20/2024",
+    isi: "Anak-anak suka banget sama masakan ini. Jadi resep favorit keluarga!",
+    balasKomentar: {
+      nama: "",
+      isi: ""
+    },
+    likes: 9
+  },
+  {
+    id: 5,
+    nama: "Gilang Ramadhan",
+    tanggal: "01/18/2024",
+    isi: "Sederhana tapi enak, tidak terlalu ribet membuatnya.",
+    balasKomentar: {
+      nama: "",
+      isi: ""
+    },
+    likes: 20
+  }
+];
+
+
 try {
     function tampilkanSidebar() {
         const sidebar = `
@@ -338,7 +397,46 @@ try {
 }
 
 try {
+  function tampilKomentar() {
+    const komentarContainer = document.getElementById('komentar-container');
 
+    komentarData.forEach(komentar => {
+      const komentarDiv = document.createElement('div');
+      komentarDiv.className = 'flex flex-col justify-start items-start w-full bg-white border-b border-[#c9c9c9] p-4';
+
+      komentarDiv.innerHTML = `
+        <div class="flex justify-between items-center w-full">
+          <div class="flex items-center gap-2">
+            <img src="../assets/profile.svg" alt="Profile" class="w-7 h-7 rounded-full object-cover" />
+            <div class="flex flex-col">
+              <p class="text-[13px] font-medium">${komentar.nama}</p>
+              <p class="text-[10px] font-light text-black/80">${komentar.tanggal}</p>
+            </div>
+          </div>
+        </div>
+        <div class="balas-komentar bg-[#e1e1e1] w-full p-2 mt-2 text-xs font-light text-[#1d1b20]">
+          <dt class="username text-xs text-gray-500">${komentar.balasKomentar.nama}</dt>
+          <dd>${komentar.balasKomentar.isi}</dd>
+        </div>
+        <p class="text-xs font-light text-left text-black mt-2">${komentar.isi}</p>
+        <div class="flex text-xs gap-2 mt-2">
+          <div class="flex items-center gap-0.5">
+            <span class="up-icon w-3 h-3 bg-gray-500"></span>
+            <p>${komentar.likes}</p>
+          </div>
+          <p class="text-gray-500 cursor-pointer">Balas</p>
+        </div>
+      `;
+      komentarContainer.appendChild(komentarDiv);
+    });
+    document.querySelectorAll(".balas-komentar").forEach(function(comment) {
+      var username = comment.querySelector(".username");
+      if (!username.textContent.trim()) {
+        comment.classList.add("hidden");
+      }
+    });
+
+  };
 } catch (error) {
   console.log(error)
 }
@@ -346,6 +444,7 @@ try {
 window.onload = () =>{
   tampilkanSidebar();
   tampilkanNavbarLogin();
+  tampilKomentar();
   tampilkanNavbar();
   tampilkanNavbarNoFilter();
   tampilkanSidebarLogin();

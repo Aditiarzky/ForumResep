@@ -13,6 +13,7 @@
   </head>
   <body class="bg-[#e1e1e1]">
     <div class="relative bg-[#e1e1e1]">
+      <!-- Menu Rating ulasan -->
         <menu id="menu-ratingulasan" class="fixed h-dvh w-full bg-[#111827]/50 z-50 flex hidden justify-center items-start overflow-scroll">
             <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 md:w-[480px] w-full bg-[#e1e1e1] gap-1.5">
                 <div
@@ -65,7 +66,8 @@
                     </div>
                   </div>
                   <div class="flex flex-col justify-end items-end self-stretch flex-grow-0 flex-shrink-0 gap-2.5 p-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]">
-                    <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
+                    <div class="flex w-full justify-start items-start gap-[5px]">
+                      <span class="profile h-8 w-8"></span>
                       <div class="flex flex-col justify-start items-start flex-grow gap-[5px]">
                         
                         <!-- Input Rating -->
@@ -85,7 +87,7 @@
                           </div>
                 
                         <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative overflow-hidden gap-2.5 p-2.5 rounded-xl border border-[#1d1b20]">
-                          <textarea placeholder="Masukkan ulasan..." class="w-full h-[70px] p-2 text-base text-[#1d1b20] focus:outline-none rounded resize-none"></textarea>
+                          <textarea placeholder="Masukkan ulasan..." class="w-full h-[70px] p-2 text-base text-[#1d1b20] focus:outline-none rounded resize-y"></textarea>
                         </div>
                       </div>
                     </div>
@@ -353,6 +355,107 @@
                 </div>
               </div>
         </menu>
+
+        <!-- menu komentar -->
+
+        <menu id="menu-komentar" class="fixed hidden h-dvh w-full bg-[#111827]/50 z-50 flex justify-center items-start overflow-scroll">
+          <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 md:w-[480px] w-full bg-[#e1e1e1] gap-1.5">
+              <div
+                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 h-16 gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]"
+              >
+                <a href="#" id="hidden-komentar" class="flex items-center gap-1 text-xl">
+                  <span class="arrow-kiri h-3 w-3"></span>
+                  <p>Komentar</p>
+                </a>
+              </div>
+              <div
+                class="flex flex-col justify-start p-2 items-start self-stretch flex-grow-0 flex-shrink-0 gap-1.5"
+              >
+                <div
+                  class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]"
+                >
+                  <div
+                    class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 relative"
+                  >
+                    <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+                      <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                        <img
+                          src="../assets/profile.svg"
+                          class="w-7 h-7 absolute left-[-1px] top-[-1px] rounded-[50px] object-cover"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-px"
+                      >
+                        <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#1d1b20]">
+                          Riko Setiawan
+                        </p>
+                        <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                          3 menit
+                        </p>
+                      </div>
+                    </div>
+                    <span class="titik-tiga h-5 w-5"></span>
+                  </div>
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[5px]"
+                  >
+                    <img
+                      src="../assets/foto-resep.png"
+                      class="self-stretch flex-grow-0 flex-shrink-0 h-[94px] object-cover"
+                    />
+                    <p class="flex-grow-0 flex-shrink-0 text-xl font-semibold text-left">
+                      Rendang Daging Khas Padang
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-end items-end self-stretch flex-grow-0 flex-shrink-0 gap-2.5 p-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]">
+                  <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
+                    <div class="flex w-full justify-start items-start gap-[5px]">
+                      <span class="profile h-8 w-8"></span>
+                      <div class="flex flex-col w-full justify-start items-start relative overflow-hidden gap-2.5 p-2.5 rounded-xl border border-[#1d1b20]">
+                        <!-- content komentar yang ingin dibalas -->
+                        <div class="balas-komentar bg-[#e1e1e1] p-2 text-sm gap-1 flex flex-col text-[#1d1b20]">
+                          <!-- nama user -->
+                          <dt class="username text-xs text-gray-500">
+                          </dt>
+                          <!-- isi komentar -->
+                          <dd></dd>
+                          <input type="hidden" name="komeningindibalas" value="">
+                        </div>
+                        <!-- inputan komentar user -->
+                        <textarea name="isikomentar" placeholder="Masukkan ulasan..." class="w-full text-base text-[#1d1b20] focus:outline-none rounded resize-y p-2"></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="flex justify-center items-center gap-2.5 px-4 py-2 rounded-[5px] bg-[#fe005c] text-white text-sm font-medium">Kirim</button>
+                </div>
+
+              <div
+                class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative"
+              >
+                <div
+                  class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+                >
+                  <p
+                    class="self-stretch font-bold flex-grow-0 flex-shrink-0 text-xs text-left text-black"
+                  >
+                    5 Komentar
+                  </p>
+                </div>
+                
+                <!-- isi komentar -->
+                
+                <div id="komentar-container"></div>
+                
+                <p class="flex-grow-0 flex-shrink-0 text-base text-left text-[#c9c9c9]">
+                  Tidak ada ulasan lagi...
+                </p>
+              </div>
+              </div>
+            </div>
+      </menu>
       <div class="w-full mx-auto ">
         <aside id="sidebar-login" class="fixed z-50"></aside>
         <nav id="navbar-nofilter" class="flex fixed z-10 w-full flex-col justify-start items-start self-stretch  gap-[22px] px-[15px] py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"></nav>
@@ -402,7 +505,7 @@
                     >
                         <div class="favorit-icon h-5 w-5" ></div>
                     </a>
-                    <a href="#"
+                    <a href="#" id="komentar-btn"
                         class="flex justify-start items-end  gap-0.5 p-2.5 rounded-[5px] bg-[#e1e1e1] border border-[#c9c9c9]"
                     >
                         <div class="komen h-5 w-5" ></div>
@@ -551,6 +654,16 @@
         event.preventDefault();
         var menuRatingUlasan = document.getElementById("menu-ratingulasan");
         menuRatingUlasan.classList.toggle("hidden");
+      });
+      document.getElementById("komentar-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        var menukomentar = document.getElementById("menu-komentar");
+        menukomentar.classList.toggle("hidden");
+      });
+      document.getElementById("hidden-komentar").addEventListener("click", function(event) {
+        event.preventDefault();
+        var menukomentar = document.getElementById("menu-komentar");
+        menukomentar.classList.toggle("hidden");
       });
     </script>
   </body>
