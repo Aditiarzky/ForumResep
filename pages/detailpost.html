@@ -456,6 +456,61 @@
               </div>
             </div>
       </menu>
+
+      <!-- menu simpan resep -->
+
+      <menu id="menu-simpan" class=" hidden flex items-center justify-center fixed w-full h-dvh bg-black/50 z-50">
+        <div class="py-5 w-72 rounded-lg bg-white justify-center items-center px-10 gap-3 flex-col flex">
+        <span class="berhasil-icon w-24 h-24"></span>
+        <p class="font-bold text-xl text-center bg-clip-text text-transparent bg-gradient-to-r from-[#1d1b20] to-[#FE005C]">Resep Berhasil Disimpan</p>
+        <a href="" id="daftarbelanja-btn" class="text-blue-700">Buat daftar belanja?</a>
+        <a href="" id="close-simpan" class="text-[#FE005c]">Keluar</a>
+        </div>
+      </menu>
+
+      <!-- menu buat daftar belanja -->
+
+      <menu id="menu-daftarbelanja" class="hidden flex items-center justify-center fixed w-full h-dvh bg-black/50 z-50">
+        <div id="card-buatdaftar" class="w-80 rounded-lg bg-white justify-center items-center p-6 gap-1 flex-col flex">
+          
+          <h2 class="text-lg font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#1d1b20] to-[#FE005C]">
+            Pilih Daftar Belanja Anda
+          </h2>
+          
+          <div class="space-y-2 flex justify-start flex-col items-start w-full">
+              <label class="flex items-center">
+                  <input type="radio" name="belanja" class="text-pink-600 focus:ring-pink-500">
+                  <span class="ml-2 text-gray-700">Belanja aja dulu</span>
+              </label>
+              
+              <label class="flex items-center">
+                  <input type="radio" name="belanja" class="text-pink-600 focus:ring-pink-500">
+                  <span class="ml-2 text-gray-700">Belanja besok</span>
+              </label>
+              
+          </div>
+          <div>
+            <h1>Buat daftar belanja baru</h1>
+            <div class="mt-4 flex items-center border-b border-gray-300 pb-2">
+                <input type="text" placeholder="Contoh: Belanja pasar senin" class="w-full text-sm px-3 py-1 border border-gray-300 rounded-l-md focus:outline-none focus:border-purple-500" />
+                <button class="px-4 py-1 bg-purple-500 text-white rounded-r-md text-sm">Buat</button>
+            </div>
+          </div>
+          <div class="flex w-full justify-between items-center mt-6">
+              <button id="buatdaftarbelanja-btn" class="px-4 py-2 bg-[#FE005C] text-white rounded-md text-sm">Simpan</button>
+              <a href="#" class="text-purple-600 text-sm">Daftar belanja saya &gt;</a>
+          </div>
+
+        </div>
+
+        <div id="after-buatdaftar" class="hidden py-5 w-72 rounded-lg bg-white justify-center items-center px-10 gap-3 flex-col flex">
+          <span class="berhasil-icon w-24 h-24"></span>
+          <p class="font-bold text-xl text-center bg-clip-text text-transparent bg-gradient-to-r from-[#1d1b20] to-[#FE005C]">Resep Berhasil Disimpan</p>
+          <a href="" class="text-blue-700">Lihat resep disimpan</a>
+          <a href="" id="close-daftarbelanja" class="text-[#FE005c]">Keluar</a>
+        </div>
+      </menu>
+      
       <div class="w-full mx-auto ">
         <aside id="sidebar-login" class="fixed z-50"></aside>
         <nav id="navbar-nofilter" class="flex fixed z-10 w-full flex-col justify-start items-start self-stretch  gap-[22px] px-[15px] py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"></nav>
@@ -510,7 +565,7 @@
                     >
                         <div class="komen h-5 w-5" ></div>
                     </a>
-                    <a href="#"
+                    <a href="#" id="simpan-btn"
                         class="flex justify-start items-end gap-0.5 p-2.5 rounded-[5px] bg-[#e1e1e1] border border-[#c9c9c9]"
                     >
                         <div class="simpan h-5 w-5" ></div>
@@ -664,6 +719,40 @@
         event.preventDefault();
         var menukomentar = document.getElementById("menu-komentar");
         menukomentar.classList.toggle("hidden");
+      });
+      document.getElementById("buatdaftarbelanja-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        var cardBuatDaftar = document.getElementById("card-buatdaftar");
+        var afterBuatDaftar = document.getElementById("after-buatdaftar");
+        cardBuatDaftar.classList.toggle("hidden");
+        afterBuatDaftar.classList.toggle("hidden");
+      });
+      const simpanBtn = document.getElementById('simpan-btn');
+      const menus = document.getElementById('menu-simpan');
+      
+      simpanBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        menus.classList.toggle('hidden');
+      });
+      
+      document.getElementById('close-simpan').addEventListener('click', (e) => {
+        e.preventDefault();
+        menus.classList.toggle('hidden');
+      });
+      document.getElementById('close-daftarbelanja').addEventListener('click', (e) => {
+        var menuDaftarBelanja = document.getElementById('menu-daftarbelanja');
+        var afterBuatDaftar = document.getElementById("after-buatdaftar");
+        var cardBuatDaftar = document.getElementById("card-buatdaftar");
+        e.preventDefault();
+        menuDaftarBelanja.classList.toggle('hidden');
+        cardBuatDaftar.classList.toggle('hidden');
+        afterBuatDaftar.classList.toggle('hidden');
+      });
+      document.getElementById('daftarbelanja-btn').addEventListener('click', (e) => {
+        const menuDaftarBelanja = document.getElementById('menu-daftarbelanja')
+        e.preventDefault();
+        menus.classList.toggle('hidden');
+        menuDaftarBelanja.classList.toggle('hidden');
       });
     </script>
   </body>

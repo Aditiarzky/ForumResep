@@ -121,3 +121,9 @@ html, body {
     mask-image: url('assets/up-icon.svg');
     mask-size: contain;
 }
+.berhasil-icon{
+    background-image: url(assets/check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
