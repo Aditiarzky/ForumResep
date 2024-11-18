@@ -11,19 +11,253 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prociono&display=swap" rel="stylesheet">
     <script src="../component.js"></script>
   </head>
-  <body>
+  <body class="bg-[#e1e1e1]">
     
-    <div class="relative bg-[#e1e1e1]">
-      <div class="w-full mx-auto ">
+    <div class="relative">
+      <div class="w-full mx-auto">
+        <div style="background-image: url(../assets/bg-profile.svg); background-size: cover; " class="w-full md:h-56 md:bg-top bg-bottom h-72 absolute"></div>
         <aside id="sidebar-login" class="fixed z-50">
          
         </aside>
-        <nav id="navbar-login" class="flex fixed z-10 w-full flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[22px] px-[15px] py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]">
+        <nav id="navbar-profile" class="flex sticky z-10 w-full flex-col justify-start items-start self-stretch gap-[22px] px-[15px] py-2.5 border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]">
         </nav>
-        <div class="flex flex-col pt-44 mx-auto justify-start items-center w-full left-0 top-0 gap-1.5">
-          test  
+        <div class="flex flex-col mx-auto justify-start items-center w-full left-0 top-0 gap-1.5">
+          <div class="bg-white w-full">
+          <div class="bg-white pt-5 flex-col md:flex-row w-full max-w-6xl flex items-end justify-end gap-5 md:h-44">
+            <div
+              class="flex flex-col justify-start items-center self-stretch relative gap-6"
+            >
+              <div class="flex-grow-0 flex-shrink-0 flex justify-end w-[154px] h-[150px]">
+                <div
+                  class="w-40 h-40 absolute top-0 overflow-hidden rounded-[100px] profile border border-white"
+                ></div>
+                <div
+                  class="flex justify-end items-center absolute top-[100px] gap-2.5 p-2.5 rounded-[30px] bg-[#e1e1e1] border-[0.5px] border-[#c9c9c9]"
+                >
+                  <div
+                    class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 h-[30px] w-[30px] relative overflow-hidden gap-2.5 px-px py-[3px]"
+                  >
+                    <div class="camera-icon w-7 h-6"></div>
+                  </div>
+                </div>
+              </div>
+              <p
+                class="self-stretch w-full text-2xl font-semibold text-center text-[#1d1b20]"
+              >
+                Albertus Kelvin
+              </p>
+              <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-[15px]">
+                <div
+                  class="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 w-[57px] relative"
+                >
+                  <p
+                    class="self-stretch w-[57px] text-xl font-semibold text-center text-[#1d1b20]"
+                  >
+                    100
+                  </p>
+                  <p class="self-stretch w-[57px] text-xs text-left text-[#1d1b20]">
+                    Postingan
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 w-[60px] relative"
+                >
+                  <p
+                    class="self-stretch w-[60px] text-xl font-semibold text-center text-[#1d1b20]"
+                  >
+                    12
+                  </p>
+                  <p class="flex-grow-0 flex-shrink-0 w-[39px] text-xs text-left text-[#1d1b20]">Ulasan</p>
+                </div>
+                <div
+                  class="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 w-[59px] relative"
+                >
+                  <p
+                    class="self-stretch w-[59px] text-xl font-semibold text-center text-[#1d1b20]"
+                  >
+                    1M
+                  </p>
+                  <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-[#1d1b20]">Followers</p>
+                </div>
+              </div>
+              <div
+                class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[200px] relative gap-2.5 p-2.5 rounded-[5px] bg-[#fe005c]"
+              >
+                <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-white">Edit Profile</p>
+              </div>
+            </div>
+            <div class="flex sm:max-w-[480px] justify-between w-full">
+              <a href="#" id="post-btn" class="p-1 w-full text-center border-b-2 border-[#FE005c]">Postingan</a>
+              <a href="#" id="ulasan-btn" class="p-1 w-full text-center border-[#FE005c]">Ulasan</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full">
+          <div class="flex justify-center md:justify-end p-2 max-w-6xl">
+            <div id="menu-post" class="max-w-[465px] flex items-center flex-col w-full">
+              <div class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-1.5" id="resepContainer"></div>
+              <p class="flex-grow-0 flex-shrink-0 text-base text-left text-[#c9c9c9]">
+                Tidak ada postingan lagi...
+              </p>
+            </div>
+            <div id="menu-ulasan" class="max-w-[465px] hidden flex items-center flex-col w-full">
+              <div
+                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]"
+              >
+              <a href="detailpost.html" class="text-xs text-blue-600 font-semibold">Ayam Goreng Krispi Ala Rumahan</a>
+                <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
+                  <div
+                    class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                  >
+                    <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                      <img
+                        src="image-1.png"
+                        class="w-7 h-7 absolute left-[-1px] top-[-1px] rounded-[50px] object-cover"
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-28 relative gap-px"
+                    >
+                      <p class="flex-grow-0 flex-shrink-0 text-[13px] font-medium text-left text-[#1d1b20]">
+                        Dibya Setiaji
+                      </p>
+                      <div
+                        class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                      >
+                        <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                          ⭐ 9
+                        </p>
+                        <p class="flex-grow-0 flex-shrink-0 text-[10px] font-light text-left text-black/80">
+                          02/2/2024
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p
+                  class="self-stretch flex-grow-0 flex-shrink-0 text-xs font-light text-left text-black"
+                >
+                  Dengan waktu persiapan dan memasak yang cukup efisien, resep ini ideal bagi mereka yang
+                  sibuk namun tetap ingin menikmati masakan rumahan yang lezat.
+                </p>
+              </div>
+              <p class="flex-grow-0 flex-shrink-0 text-base text-left text-[#c9c9c9]">
+                Tidak ada ulasan lagi...
+              </p>
+            </div>
+            <script>
+              // Data fiktif resep dalam array
+              const resepData = [
+                {
+                  nama: "Ayam Goreng Krispi ala Rumahan",
+                  deskripsi: "Ayam goreng krispi ini punya rasa...",
+                  penulis: "Albertus Kelvin",
+                  waktu: "15 menit",
+                  rating: 8.2,
+                  komen: 100,
+                  simpan: "1k",
+                  gambar: "../assets/foto-resep.png",
+                  fotoProfil: "../assets/profile.svg"
+                },
+                {
+                  nama: "Nasi Goreng Kampung",
+                  deskripsi: "Nasi goreng kampung dengan cita rasa...",
+                  penulis: "Albertus Kelvin",
+                  waktu: "10 menit",
+                  rating: 9.1,
+                  komen: 75,
+                  simpan: "900",
+                  gambar: "../assets/foto-resep.png",
+                  fotoProfil: "../assets/profile.svg"
+                },
+                {
+                  nama: "Pancake Cokelat Lezat",
+                  deskripsi: "Pancake cokelat dengan taburan...",
+                  penulis: "Albertus Kelvin",
+                  waktu: "20 menit",
+                  rating: 7.8,
+                  komen: 45,
+                  simpan: "500",
+                  gambar: "../assets/foto-resep.png",
+                  fotoProfil: "../assets/profile.svg"
+                }
+              ];
+            
+              // Fungsi untuk membuat elemen resep
+              function tampilkanResep(resep) {
+                return `
+                  <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 max-w-[562px] w-full gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]">
+                    <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+                      <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                        <img src="${resep.fotoProfil}" class="w-7 h-7 rounded-[50px] object-cover" />
+                      </div>
+                      <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-full relative gap-px">
+                        <p class="text-[13px] font-medium text-left text-[#1d1b20]">${resep.penulis}</p>
+                        <p class="text-[10px] font-light text-left text-black/80">${resep.waktu}</p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col justify-start items-start self-stretch gap-[5px]">
+                      <img src="${resep.gambar}" class="self-stretch h-[220px] object-cover" />
+                      <div class="flex flex-col justify-start items-start self-stretch gap-0.5">
+                        <p class="text-xl font-semibold text-left">${resep.nama}</p>
+                        <p class="font-medium text-left">
+                          <span class="text-sm font-medium text-left text-[#1d1b20]">${resep.deskripsi}</span>
+                          <span class="text-[10px] font-medium text-left text-[#696969]">lihat selengkapnya</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center self-stretch">
+                      <div class="flex justify-center items-end gap-0.5">
+                        <div class="rating w-5 h-5"></div>
+                        <p class="text-xs text-left text-[#696969]">${resep.rating}</p>
+                      </div>
+                      <div class="flex justify-center items-center gap-0.5">
+                        <div class="komen w-5 h-5"></div>
+                        <p class="text-xs text-left text-[#696969]">${resep.komen}</p>
+                      </div>
+                      <div class="flex justify-center items-center gap-0.5">
+                        <div class="simpan w-5 h-5"></div>
+                        <p class="text-xs text-left text-[#696969]">${resep.simpan}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+              }
+            
+              // Loop untuk menambahkan setiap resep ke dalam HTML
+              const resepContainer = document.getElementById("resepContainer");
+              resepData.forEach((resep) => {
+                resepContainer.innerHTML += tampilkanResep(resep);
+              });
+            </script>
+          </div>
+        </div>
         </div>
       </div>
     </div>
+    <script>
+      document.getElementById("post-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        var postbtn = document.getElementById("post-btn");
+        var ulasanbtn = document.getElementById("ulasan-btn");
+        var menupost = document.getElementById("menu-post");
+        var menuulasan = document.getElementById("menu-ulasan");
+        menupost.classList.toggle("hidden");
+        postbtn.classList.toggle("border-b-2");
+        menuulasan.classList.toggle("hidden");
+        ulasanbtn.classList.toggle("border-b-2");
+      });
+      document.getElementById("ulasan-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        var postbtn = document.getElementById("post-btn");
+        var ulasanbtn = document.getElementById("ulasan-btn");
+        var menupost = document.getElementById("menu-post");
+        var menuulasan = document.getElementById("menu-ulasan");
+        menupost.classList.toggle("hidden");
+        postbtn.classList.toggle("border-b-2");
+        menuulasan.classList.toggle("hidden");
+        ulasanbtn.classList.toggle("border-b-2");
+      });
+    </script>
   </body>
 </html>

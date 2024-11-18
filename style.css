@@ -20,6 +20,21 @@ html, body {
     background-size: contain;
     background-position: center;
 }
+.icon-apl-mask{
+    -webkit-mask-image: url('assets/icon.svg');
+    mask-image: url('assets/icon.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.burger-icon-mask{
+    -webkit-mask-image: url('assets/burger.svg');
+    mask-image: url('assets/burger.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
 .login-icon{
     background-image: url(assets/log-in.svg);
     background-repeat: no-repeat;
@@ -31,6 +46,13 @@ html, body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+.cari-icon-mask{
+    -webkit-mask-image: url('assets/search.svg');
+    mask-image: url('assets/search.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
 }
 .rating{
     background-image: url(assets/rating.svg);
@@ -68,6 +90,13 @@ html, body {
     background-size: contain;
     background-position: center;
 }
+.tambah-icon-mask{
+    -webkit-mask-image: url('assets/add_circle.svg');
+    mask-image: url('assets/add_circle.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
 .favorit-icon{
     background-image: url(assets/favorit.svg);
     background-repeat: no-repeat;
@@ -79,6 +108,13 @@ html, body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+.notif-icon-mask{
+    -webkit-mask-image: url('assets/bell.svg');
+    mask-image: url('assets/bell.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
 }
 .logout-icon{
     background-image: url(assets/log-out.svg);
@@ -121,8 +157,19 @@ html, body {
     mask-image: url('assets/up-icon.svg');
     mask-size: contain;
 }
+.home-icon{
+    -webkit-mask-image: url('assets/home.svg');
+    mask-image: url('assets/home.svg');
+    mask-size: contain;
+}
 .berhasil-icon{
     background-image: url(assets/check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.camera-icon{
+    background-image: url(assets/camera.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
