@@ -18,11 +18,26 @@
         <aside id="sidebar-login" class="fixed z-50">
          
         </aside>
-        <nav id="navbar-login" class="flex fixed z-10 w-full flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[22px] px-[15px] py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]">
+        <nav id="navbar-nofilter" class="flex fixed z-10 w-full flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[22px] px-[15px] py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]">
         </nav>
         <div
-          class="flex flex-col pt-44 mx-auto justify-start items-center w-full left-0 top-0 gap-1.5"
+          class="flex flex-col pt-20 mx-auto justify-start items-center w-full left-0 top-0 gap-1.5"
         >
+          <div class="mb-3 w-full flex justify-center items-center gap-1.5 flex-col">
+            <div class="relative hidden max-w-[562px] w-full md:block">
+              <input 
+                  type="text" 
+                  placeholder="Cari resep yang disimpan" 
+                  class="w-full h-12 pl-10 pr-4 border-b border-[#49454f] bg-white rounded-tl rounded-tr text-[#49454f] focus:outline-none focus:bg-white peer"
+              />
+              <div
+                class="cari-icon w-[23px] h-14 absolute left-2 top-[1.2rem] transform -translate-y-1/2 text-gray-500"
+              ></div>
+            </div>
+            <a href="daftarbelanja.html" class="flex justify-center items-center max-w-[562px] w-full p-2.5 rounded-md bg-[#fe005c]">
+              <p class="text-base font-medium text-white">Lihat daftar belanja</p>
+            </a>
+          </div>
           <div id="resepContainer" class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-1.5" ></div>
         </div>
             <p class="flex-grow-0 flex-shrink-0 text-base text-left text-[#c9c9c9]">

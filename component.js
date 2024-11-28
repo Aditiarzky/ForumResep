@@ -121,10 +121,10 @@ try {
                     <span class="home-icon bg-gray-100 h-4 w-4">
                   </a>
                   </a>
-                  <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px]">
+                  <a href="resepdisimpan.html" class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px]">
                     <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-center text-[#1d1b20]">Resep Disimpan</p>
                     <span class="simpan h-4 w-4"></span>
-                  </div>
+                  </a>
                   <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px]">
                     <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-center text-[#1d1b20]">Resep Favorit</p>
                     <span class="favorit-icon h-4 w-4"></span>
