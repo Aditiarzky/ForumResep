@@ -69,7 +69,7 @@ function handleSidebarLogin() {
 try {
     function tampilkanSidebar() {
         const sidebar = `
-          <div id="sidebarId" class="w-[181px] hidden lg:block h-svh fixed overflow-hidden bg-white">
+          <div id="sidebarId" class="w-[181px] hidden lg:block h-dvh bottom-0 fixed overflow-hidden bg-white">
             <div class="flex flex-col justify-between items-center w-[140px] h-screen absolute left-5 pt-5">
               <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-6">
               <div class="flex w-full items-center justify-between">
@@ -122,7 +122,7 @@ try {
 try {
   function tampilkanSidebarLogin() {
       const sidebarL = `
-        <div id="sidebarLogin" class="w-[181px] hidden lg:block h-svh fixed overflow-hidden bg-white">
+        <div id="sidebarLogin" class="w-[181px] hidden lg:block h-dvh bottom-0 fixed overflow-hidden bg-white">
           <div class="flex flex-col justify-between items-center w-[140px] h-screen absolute left-5 pt-5">
             <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-6">
               <div class="flex w-full items-center justify-between">
