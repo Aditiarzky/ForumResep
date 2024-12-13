@@ -56,14 +56,26 @@ const komentarData = [
   }
 ];
 
+function handleSidebar() {
+  const s = document.getElementById("sidebarId");
+  s.classList.toggle("hidden");
+}
+
+function handleSidebarLogin() {
+  const sl = document.getElementById("sidebarLogin");
+  sl.classList.toggle("hidden");
+}
 
 try {
     function tampilkanSidebar() {
         const sidebar = `
-          <div class="w-[181px] hidden lg:block h-svh fixed overflow-hidden bg-white">
+          <div id="sidebarId" class="w-[181px] hidden lg:block h-svh fixed overflow-hidden bg-white">
             <div class="flex flex-col justify-between items-center w-[140px] h-screen absolute left-5 pt-5">
               <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-6">
-                <div class="flex icon-apl w-16 h-14 flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"></div>
+              <div class="flex w-full items-center justify-between">
+                <a href="index.html" class="flex icon-apl w-16 h-14 flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"></a>
+                <a href="#" onclick="handleSidebar()" class="close-icon md:hidden h-8 w-8"></a>
+              </div>
                 <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
                   <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
                     <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px] rounded-[5px] bg-[#fe005c]">
@@ -110,13 +122,16 @@ try {
 try {
   function tampilkanSidebarLogin() {
       const sidebarL = `
-        <div class="w-[181px] hidden lg:block h-svh fixed overflow-hidden bg-white">
+        <div id="sidebarLogin" class="w-[181px] hidden lg:block h-svh fixed overflow-hidden bg-white">
           <div class="flex flex-col justify-between items-center w-[140px] h-screen absolute left-5 pt-5">
             <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-6">
-              <div class="flex icon-apl w-16 h-14 flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"></div>
+              <div class="flex w-full items-center justify-between">
+                <a href="beranda.html" class="flex icon-apl w-16 h-14 flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"></a>
+                <a href="#" onclick="handleSidebarLogin()" class="close-icon md:hidden h-8 w-8"></a>
+              </div>
               <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
                 <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
-                  <a href="/pages/beranda.html" class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px] rounded-[5px] bg-[#fe005c]">
+                  <a href="beranda.html" class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px] rounded-[5px] bg-[#fe005c]">
                     <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-center text-white">Beranda</p>
                     <span class="home-icon bg-gray-100 h-4 w-4">
                   </a>
@@ -136,10 +151,10 @@ try {
                     </svg>
                   </div>
                   <div class="border-b border-gray-300 w-full"></div>
-                  <div class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px]">
+                  <a href="index.html" class="flex justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative p-[5px]">
                     <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-center text-[#fe005c]">Logout</p>
                     <span class="logout-icon h-4 w-4"></span>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -168,14 +183,14 @@ try {
         >
             <div class="container mx-auto flex justify-between self-stretch flex-grow-0 flex-shrink-0">
               <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2.5">
-                <div
+                <a href="#" onclick="handleSidebarLogin()"
                   class="burger-icon w-[23px] xl:hidden h-14 flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1"
                 >
-                </div>
-                <div
+                </a>
+                <a href="beranda.html"
                   class="icon-apl w-16 h-14 flex xl:hidden flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"
                 >
-                </div>
+                </a>
               </div>
               <div class="relative w-96 hidden md:block">
                 <input 
@@ -188,13 +203,13 @@ try {
                 ></div>
               </div>
               <div class="flex gap-2">
-                <div
+                <a href="cari.html"
                 class="cari-icon md:hidden block w-[23px]  h-14 "
-              ></div>
+              ></a>
                 <a href="posting.html"><div
                 class="tambah-icon w-[23px]  h-14 "
               ></div></a>
-                <a href="login.html"><div
+                <a href="notif.html"><div
                 class="notif-icon w-[23px]  h-14 "
               ></div></a>
               <a href="profile.html" class="flex justify-center items-center">
@@ -253,6 +268,89 @@ try {
 }
 
 try {
+    function tampilkanNavbarCari() {
+        const navbarC = `
+          <div
+          class="flex flex-col mx-auto justify-center items-center w-full left-0 top-0 gap-1.5"
+        >
+            <div class="container mx-auto flex justify-between self-stretch flex-grow-0 flex-shrink-0">
+              <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2.5">
+                <a href="#" onclick="handleSidebarLogin()"
+                  class="burger-icon w-[23px] xl:hidden h-14 flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1"
+                >
+                </a>
+                <a  href="beranda.html"
+                  class="icon-apl w-16 h-14 flex xl:hidden flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"
+                >
+                </a>
+              </div>
+              <div class="flex gap-2">
+                <a href="posting.html"><div
+                class="tambah-icon w-[23px]  h-14 "
+              ></div></a>
+                <a href="notif.html"><div
+                class="notif-icon w-[23px]  h-14 "
+              ></div></a>
+              <a href="profile.html" class="flex justify-center items-center">
+                <div alt="Profile" class="profile w-8  h-8 rounded-full mr-3 object-cover"></div>
+              </a>
+              </div>
+            </div>
+            <div class="flex justify-center items-center w-full">
+              <div class="relative md:w-96 w-full">
+                <input 
+                    type="text" 
+                    placeholder="Cari resep..." 
+                    class="w-full py-2 pl-10 pr-4 border-b bg-[#e6e0e9] rounded-t-md border-gray-300 focus:outline-none"
+                />
+                <div
+                  class="cari-icon w-[23px] h-14 absolute left-2 top-[1.2rem] transform -translate-y-1/2 text-gray-500"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="flex container mx-auto justify-center self-stretch flex-grow-0 flex-shrink-0 gap-2"
+            >
+              <div
+                class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 p-[5px] rounded-md bg-[#fe005c]"
+              >
+                <p class="flex-grow-0 flex-shrink-0 text-xs text-center text-white">Semua</p>
+              </div>
+              <div
+                class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 p-[5px] rounded-md bg-[#e1e1e1]"
+              >
+                <p class="flex-grow-0 flex-shrink-0 text-xs text-center text-[#1d1b20]">Sarapan</p>
+              </div>
+              <div
+                class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 p-[5px] rounded-md bg-[#e1e1e1]"
+              >
+                <p class="flex-grow-0 flex-shrink-0 text-xs text-center text-[#1d1b20]">Utama</p>
+              </div>
+              <div
+                class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 p-[5px] rounded-md bg-[#e1e1e1]"
+              >
+                <p class="flex-grow-0 flex-shrink-0 text-xs text-center text-[#1d1b20]">Desert</p>
+              </div>
+              <div
+                class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 p-[5px] rounded-md bg-[#e1e1e1]"
+              >
+                <p class="flex-grow-0 flex-shrink-0 text-xs text-center text-[#1d1b20]">Snack</p>
+              </div>
+            </div>
+        `;
+      
+        const navCContainer = document.getElementById("navbar-cari");
+        if (navCContainer) {
+          navCContainer.innerHTML = navbarC;
+        }
+      }
+      
+     
+} catch (error) {
+    console.log(error)
+}
+
+try {
     function tampilkanNavbarNoFilter() {
         const navbarNF = `
           <div
@@ -260,14 +358,14 @@ try {
         >
             <div class="container mx-auto flex justify-between self-stretch flex-grow-0 flex-shrink-0">
               <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2.5">
-                <div
+                <a href="#" onclick="handleSidebarLogin()"
                   class="burger-icon w-[23px] xl:hidden h-14 flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1"
                 >
-                </div>
-                <div
+                </a>
+                <a  href="beranda.html"
                   class="icon-apl w-16 h-14 flex xl:hidden flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"
                 >
-                </div>
+                </a>
               </div>
               <div class="relative w-96 hidden md:block">
                 <input 
@@ -275,18 +373,18 @@ try {
                     placeholder="Cari resep..." 
                     class="w-full py-2 pl-10 pr-4 border-b border-gray-300 focus:outline-none"
                 />
-                <div
+                <div  href="beranda.html"
                   class="cari-icon w-[23px] h-14 absolute left-2 top-[1.2rem] transform -translate-y-1/2 text-gray-500"
                 ></div>
               </div>
               <div class="flex gap-2">
-                <div
+                <a href="cari.html"
                 class="cari-icon md:hidden block w-[23px]  h-14 "
-              ></div>
+              ></a>
                 <a href="posting.html"><div
                 class="tambah-icon w-[23px]  h-14 "
               ></div></a>
-                <a href="login.html"><div
+                <a href="notif.html"><div
                 class="notif-icon w-[23px]  h-14 "
               ></div></a>
               <a href="profile.html" class="flex justify-center items-center">
@@ -314,14 +412,14 @@ try {
         >
             <div class="container mx-auto flex justify-between self-stretch flex-grow-0 flex-shrink-0">
               <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2.5">
-                <div
+                <a href="#" onclick="handleSidebarLogin()"
                   class="burger-icon-mask bg-gray-100 w-[23px] xl:hidden h-14 flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1"
                 >
-                </div>
-                <div
+                </a>
+                <a href="beranda.html"
                   class="icon-apl-mask bg-gray-100 w-16 h-14 flex xl:hidden flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"
                 >
-                </div>
+                </a>
               </div>
               <div class="relative w-96 hidden md:block">
                 <input 
@@ -334,13 +432,13 @@ try {
                 ></div>
               </div>
               <div class="flex gap-2">
-                <div
+                <a href="cari.html"
                 class="cari-icon-mask bg-gray-100 md:hidden block w-[23px]  h-14 "
-              ></div>
+              ></a>
                 <a href="posting.html"><div
                 class="tambah-icon-mask bg-gray-100 w-[23px]  h-14 "
               ></div></a>
-                <a href="login.html"><div
+                <a href="notif.html"><div
                 class="notif-icon-mask bg-gray-100 w-[23px]  h-14 "
               ></div></a>
               <a href="profile.html" class="flex justify-center items-center">
@@ -369,14 +467,14 @@ try {
         >
             <div class="container mx-auto flex justify-between self-stretch flex-grow-0 flex-shrink-0">
               <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 gap-2.5">
-                <div
+                <a href="#" onclick="handleSidebar()"
                   class="burger-icon w-[23px] xl:hidden h-14 flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1"
                 >
-                </div>
-                <div
+                </a>
+                <a href="index.html"
                   class="icon-apl w-16 h-14 flex xl:hidden flex-col justify-start items-center flex-grow-0 flex-shrink-0 relative"
                 >
-                </div>
+                </a>
               </div>
               <div class="relative w-96 hidden md:block">
                 <input 
@@ -389,10 +487,10 @@ try {
                 ></div>
               </div>
               <div class="flex gap-2">
-                <div
+                <a href="pages/cari.html"
                 class="cari-icon md:hidden block w-[23px]  h-14 "
-              ></div>
-                <a href="/pages/login.html"><div
+              ></a>
+                <a href="login.html"><div
                 class="login-icon w-[23px]  h-14 "
               ></div></a>
               </div>
@@ -489,6 +587,7 @@ document.addEventListener("DOMContentLoaded", () => {
   tampilkanSidebarLogin();
   tampilkanNavbarLogin();
   tampilkanNavbar();
+  tampilkanNavbarCari();
   tampilkanNavbarNoFilter();
   tampilkanNavbarProfile();
 });

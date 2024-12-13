@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Preview</title>
-    <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prociono&display=swap" rel="stylesheet">
-    <script src="component.js"></script>
+    <script src="../component.js"></script>
   </head>
   <body>
     
@@ -43,8 +43,8 @@
             rating: 8.2,
             komen: 100,
             simpan: "1k",
-            gambar: "assets/foto-resep.png",
-            fotoProfil: "assets/profile.svg"
+            gambar: "../assets/foto-resep.png",
+            fotoProfil: "../assets/profile.svg"
           },
           {
             nama: "Nasi Goreng Kampung",
@@ -54,8 +54,8 @@
             rating: 9.1,
             komen: 75,
             simpan: "900",
-            gambar: "assets/foto-resep.png",
-            fotoProfil: "assets/profile.svg"
+            gambar: "../assets/foto-resep.png",
+            fotoProfil: "../assets/profile.svg"
           },
           {
             nama: "Pancake Cokelat Lezat",
@@ -65,8 +65,8 @@
             rating: 7.8,
             komen: 45,
             simpan: "500",
-            gambar: "assets/foto-resep.png",
-            fotoProfil: "assets/profile.svg"
+            gambar: "../assets/foto-resep.png",
+            fotoProfil: "../assets/profile.svg"
           }
         ];
       
@@ -74,7 +74,7 @@
         function tampilkanResep(resep) {
           return `
             <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 max-w-[562px] w-full gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]">
-              <a href="pages/other-profile.html" class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+              <a href="other-profile.html" class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
                 <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
                   <img src="${resep.fotoProfil}" class="w-7 h-7 rounded-[50px] object-cover" />
                 </div>
@@ -83,7 +83,7 @@
                   <p class="text-[10px] font-light text-left text-black/80">${resep.waktu}</p>
                 </div>
               </a>
-              <a href="pages/detailpost.html" class="flex flex-col justify-start items-start self-stretch gap-[5px]">
+              <a href="detailpost.html" class="flex flex-col justify-start items-start self-stretch gap-[5px]">
                 <img src="${resep.gambar}" class="self-stretch h-[220px] object-cover" />
                 <div class="flex flex-col justify-start items-start self-stretch gap-0.5">
                   <p class="text-xl font-semibold text-left">${resep.nama}</p>
