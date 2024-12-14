@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Preview</title>
+    <title>FoRes</title>
+    <link rel="shortcut icon" href="../assets/icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="../output.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +38,7 @@
         const resepData = [
           {
             nama: "Ayam Goreng Krispi ala Rumahan",
-            deskripsi: "Ayam goreng krispi ini punya rasa...",
+            deskripsi: "Ayam goreng krispi ini punya rasa Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio ipsa, aliquam repudiandae tenetur veritatis molestias nemo ullam, quisquam tempore tempora laudantium id dolores fugit odit in illo eveniet? Exercitationem!",
             penulis: "Kujou Yuki",
             waktu: "15 menit",
             rating: 8.2,
@@ -48,7 +49,7 @@
           },
           {
             nama: "Nasi Goreng Kampung",
-            deskripsi: "Nasi goreng kampung dengan cita rasa...",
+            deskripsi: "Nasi goreng kampung dengan cita rasa Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio ipsa, aliquam repudiandae tenetur veritatis molestias nemo ullam, quisquam tempore tempora laudantium id dolores fugit odit in illo eveniet? Exercitationem!",
             penulis: "Aris Tetsu",
             waktu: "10 menit",
             rating: 9.1,
@@ -59,7 +60,7 @@
           },
           {
             nama: "Pancake Cokelat Lezat",
-            deskripsi: "Pancake cokelat dengan taburan...",
+            deskripsi: "Pancake cokelat dengan taburan Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio ipsa, aliquam repudiandae tenetur veritatis molestias nemo ullam, quisquam tempore tempora laudantium id dolores fugit odit in illo eveniet? Exercitationem!",
             penulis: "Risa Amaya",
             waktu: "20 menit",
             rating: 7.8,
@@ -74,40 +75,45 @@
         function tampilkanResep(resep) {
           return `
             <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 max-w-[562px] w-full gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]">
-              <a href="other-profile.html" class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
-                <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
-                  <img src="${resep.fotoProfil}" class="w-7 h-7 rounded-[50px] object-cover" />
+                <div class="flex w-full justify-between">
+                  <a href="other-profile.html" class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+                    <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                      <img src="${resep.fotoProfil}" class="w-7 h-7 rounded-[50px] object-cover" />
+                    </div>
+                    <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-full relative gap-px">
+                      <p class="text-[13px] font-medium text-left text-[#1d1b20]">${resep.penulis}</p>
+                      <p class="text-[10px] font-light text-left text-black/80">${resep.waktu}</p>
+                    </div>
+                  </a>
+                  <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+                    <a href="" class="titik-tiga h-6 w-6"></a>
+                  </div>  
                 </div>
-                <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[68px] relative gap-px">
-                  <p class="text-[13px] font-medium text-left text-[#1d1b20]">${resep.penulis}</p>
-                  <p class="text-[10px] font-light text-left text-black/80">${resep.waktu}</p>
+                <div class="flex flex-col justify-start items-start self-stretch gap-[5px]">
+                  <a href="detailpost.html" class="w-full"><img src="${resep.gambar}" class="w-full self-stretch h-[220px] object-cover" /></a>
+                  <div class="flex flex-col justify-start items-start self-stretch gap-0.5">
+                    <p class="text-xl font-semibold text-left bg-clip-text text-transparent bg-gradient-to-r from-[#1d1b20] to-[#FE005C]">${resep.nama}</p>
+                    <p class="font-medium text-left">
+                        <p class="line-clamp-2 text-sm font-medium text-left text-[#1d1b20]">${resep.deskripsi}</p>
+                        <button class="text-sm font-medium text-left text-[#696969] lihat-selengkapnya">Lihat selengkapnya</button>
+                    </p>
+                  </div>
                 </div>
-              </a>
-              <a href="detailpost.html" class="flex flex-col justify-start items-start self-stretch gap-[5px]">
-                <img src="${resep.gambar}" class="self-stretch h-[220px] object-cover" />
-                <div class="flex flex-col justify-start items-start self-stretch gap-0.5">
-                  <p class="text-xl font-semibold text-left">${resep.nama}</p>
-                  <p class="font-medium text-left">
-                    <span class="text-sm font-medium text-left text-[#1d1b20]">${resep.deskripsi}</span>
-                    <span class="text-[10px] font-medium text-left text-[#696969]">lihat selengkapnya</span>
-                  </p>
-                </div>
-              </a>
-              <div class="flex justify-between items-center self-stretch">
-                <div class="flex justify-center items-end gap-0.5">
-                  <div class="rating w-5 h-5"></div>
-                  <p class="text-xs text-left text-[#696969]">${resep.rating}</p>
-                </div>
-                <div class="flex justify-center items-center gap-0.5">
-                  <div class="komen w-5 h-5"></div>
-                  <p class="text-xs text-left text-[#696969]">${resep.komen}</p>
-                </div>
-                <div class="flex justify-center items-center gap-0.5">
-                  <div class="simpan w-5 h-5"></div>
-                  <p class="text-xs text-left text-[#696969]">${resep.simpan}</p>
+                <div class="flex justify-between items-center self-stretch">
+                  <div class="flex justify-center items-center gap-0.5">
+                    <div class="rating w-5 h-5"></div>
+                    <p class="text-xs text-left text-[#696969]">${resep.rating}</p>
+                  </div>
+                  <div class="flex justify-center items-center gap-0.5">
+                    <div class="komen w-5 h-5"></div>
+                    <p class="text-xs text-left text-[#696969]">${resep.komen}</p>
+                  </div>
+                  <div class="flex justify-center items-center gap-0.5">
+                    <div class="simpan w-5 h-5"></div>
+                    <p class="text-xs text-left text-[#696969]">${resep.simpan}</p>
+                  </div>
                 </div>
               </div>
-            </div>
           `;
         }
       
@@ -116,6 +122,21 @@
         resepData.forEach((resep) => {
           resepContainer.innerHTML += tampilkanResep(resep);
         });
+        document.addEventListener('click', function(event) {
+                  if (event.target.classList.contains('lihat-selengkapnya')) {
+                      const button = event.target;
+                      const paragraph = button.previousElementSibling;
+                      if (paragraph.classList.contains('line-clamp-2')) {
+                          // Tampilkan teks penuh
+                          paragraph.classList.remove('line-clamp-2');
+                          button.textContent = 'Sembunyikan';
+                      } else {
+                          // Potong kembali teks
+                          paragraph.classList.add('line-clamp-2');
+                          button.textContent = 'Lihat Selengkapnya';
+                      }
+                  }
+              });    
       </script>
   </body>
 </html>

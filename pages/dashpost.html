@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoRes</title>
+    <link rel="shortcut icon" href="../assets/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prociono&display=swap" rel="stylesheet">
+    <script src="../component.js"></script>
+  </head>
+  <body class="min-h-dvh">
+    <div class="relative">
+      <div class="w-full mx-auto ">
+        <aside id="sidebar-login" class="fixed z-50">
+         
+        </aside>
+        <nav id="navbar-nofilter" class="flex fixed z-10 w-full flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[22px] px-[15px] py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]">
+        </nav>
+        <div
+          class="flex flex-col pt-20 px-2 mb-10 mx-auto justify-start items-center max-w-[562px] w-full left-0 top-0 gap-1.5"
+        >
+        <select
+          class="rounded px-2 bg-[#FE005C] py-1 text-lg w-full text-white focus:outline-none"
+          onchange="navigateToPage(this)"
+        >
+        <option value="dashpost.html">Moderasi Postingan</option>
+        <option value="dashkomen.html">Moderasi Komentar</option>
+        </select>
+        <script>
+            function navigateToPage(selectElement) {
+                const selectedValue = selectElement.value; // Ambil nilai yang dipilih
+                if (selectedValue) {
+                    window.location.href = selectedValue; // Arahkan ke halaman yang sesuai
+                }
+            }
+        </script>
+        <div class="max-w-3xl mx-auto bg-white p-4 rounded-md ">
+            <div
+              class="flex justify-between items-center border-b border-gray-300 pb-3 mb-3"
+            >
+              <h2 class="text-lg font-bold text-gray-700">Moderasi Komentar</h2>
+              <button
+                class="bg-pink-500 hover:bg-pink-600 text-white py-1 px-3 rounded"
+              >
+                Pending (0)
+              </button>
+            </div>
+      
+            <!-- Filter Options -->
+            <div class="flex flex-col gap-1 text-sm text-gray-500 mb-4">
+              <div>
+                <label class="inline-flex items-center space-x-1">
+                  <input
+                    type="radio"
+                    name="status"
+                    class="form-checkbox rounded text-pink-600"
+                    checked
+                  />
+                  <span>Approved</span>
+                </label>
+                <label class="inline-flex items-center ml-3 space-x-1">
+                  <input
+                    type="radio"
+                    name="status"
+                    class=" rounded text-pink-600"
+                  />
+                  <span>Deleted</span>
+                </label>
+                <label class="inline-flex items-center ml-3 space-x-1">
+                  <input
+                    type="radio"
+                    name="status"
+                    class=" rounded text-pink-600"
+                  />
+                  <span>All</span>
+                </label>
+                <label class="inline-flex items-center ml-3 space-x-1">
+                  <input
+                    type="radio"
+                    name="status"
+                    class=" rounded text-pink-600"
+                  />
+                  <span>Pending</span>
+                </label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <select
+                  class="border rounded px-2 py-1 text-sm focus:outline-none"
+                >
+                  <option>Sekarang</option>
+                  <option>Setahun lalu</option>
+                  <option>Seminggu lalu</option>
+                  <option>Sehari lalu</option>
+                </select>
+                <select
+                  class="border rounded px-2 py-1 text-sm focus:outline-none"
+                >
+                  <option>Terbaru</option>
+                  <option>Paling lama</option>
+                </select>
+              </div>
+            </div>
+            <!-- Komentar Card -->
+            <div
+              id="resepContainer" class="space-y-4"
+            >
+            <script>
+                const resepData = [
+                {
+                    nama: "Ayam Goreng Krispi ala Rumahan",
+                    deskripsi: "Ayam goreng krispi ini punya rasa Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo ipsum repudiandae quae amet iure nobis magnam asperiores laudantium temporibus animi hic dicta, rem itaque. Vero veritatis voluptatem laudantium maxime veniam?",
+                    penulis: "Kujou Yuki",
+                    waktu: "15 menit",
+                    rating: 8.2,
+                    komen: 100,
+                    simpan: "1k",
+                    gambar: "../assets/foto-resep.png",
+                    fotoProfil: "../assets/profile.svg"
+                },
+                {
+                    nama: "Nasi Goreng Kampung",
+                    deskripsi: "Nasi goreng kampung dengan cita rasa Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo ipsum repudiandae quae amet iure nobis magnam asperiores laudantium temporibus animi hic dicta, rem itaque. Vero veritatis voluptatem laudantium maxime veniam?",
+                    penulis: "Aris Tetsu",
+                    waktu: "10 menit",
+                    rating: 9.1,
+                    komen: 75,
+                    simpan: "900",
+                    gambar: "../assets/foto-resep.png",
+                    fotoProfil: "../assets/profile.svg"
+                },
+                {
+                    nama: "Pancake Cokelat Lezat",
+                    deskripsi: "Pancake cokelat dengan taburan Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo ipsum repudiandae quae amet iure nobis magnam asperiores laudantium temporibus animi hic dicta, rem itaque. Vero veritatis voluptatem laudantium maxime veniam?",
+                    penulis: "Risa Amaya",
+                    waktu: "20 menit",
+                    rating: 7.8,
+                    komen: 45,
+                    simpan: "500",
+                    gambar: "../assets/foto-resep.png",
+                    fotoProfil: "../assets/profile.svg"
+                }
+                ];
+            function tampilkanResep(resep) {
+                return `
+            <div class="bg-pink-50 p-4 rounded-md border border-pink-200">
+              <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 max-w-[562px] w-full gap-[15px] px-2.5 py-[15px] bg-white border-t-0 border-r-0 border-b border-l-0 border-[#e1e1e1]">
+                <div class="flex w-full justify-between">
+                  <a href="other-profile.html" class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+                    <div class="flex-grow-0 flex-shrink-0 w-7 h-7 relative">
+                      <img src="${resep.fotoProfil}" class="w-7 h-7 rounded-[50px] object-cover" />
+                    </div>
+                    <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-full relative gap-px">
+                      <p class="text-[13px] font-medium text-left text-[#1d1b20]">${resep.penulis}</p>
+                      <p class="text-[10px] font-light text-left text-black/80">${resep.waktu}</p>
+                    </div>
+                  </a>
+                  <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+                    <a href="" class="titik-tiga h-6 w-6"></a>
+                  </div>  
+                </div>
+                <div class="flex flex-col justify-start items-start self-stretch gap-[5px]">
+                  <a href="detailpost.html" class="w-full"><img src="${resep.gambar}" class="w-full self-stretch h-[220px] object-cover" /></a>
+                  <div class="flex flex-col justify-start items-start self-stretch gap-0.5">
+                    <p class="text-xl font-semibold text-left bg-clip-text text-transparent bg-gradient-to-r from-[#1d1b20] to-[#FE005C]">${resep.nama}</p>
+                    <p class="font-medium text-left">
+                        <p class="line-clamp-2 text-sm font-medium text-left text-[#1d1b20]">${resep.deskripsi}</p>
+                        <button class="text-sm font-medium text-left text-[#696969] lihat-selengkapnya">Lihat selengkapnya</button>
+                    </p>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center self-stretch">
+                  <div class="flex justify-center items-center gap-0.5">
+                    <div class="rating w-5 h-5"></div>
+                    <p class="text-xs text-left text-[#696969]">${resep.rating}</p>
+                  </div>
+                  <div class="flex justify-center items-center gap-0.5">
+                    <div class="komen w-5 h-5"></div>
+                    <p class="text-xs text-left text-[#696969]">${resep.komen}</p>
+                  </div>
+                  <div class="flex justify-center items-center gap-0.5">
+                    <div class="simpan w-5 h-5"></div>
+                    <p class="text-xs text-left text-[#696969]">${resep.simpan}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+              class="mt-2 flex space-x-2"
+            >
+              <button
+                class="border text-gray-700 bg-white px-3 py-1 rounded hover:text-white hover:bg-green-600 text-xs"
+              >
+                Approve
+              </button>
+              <button
+                class="border text-gray-700 bg-white px-3 py-1 rounded hover:text-white hover:bg-red-600 text-xs"
+              >
+                Delete
+              </button>
+            </div>
+            </div>`;
+         }
+        
+         // Loop untuk menambahkan setiap resep ke dalam HTML
+         const resepContainer = document.getElementById("resepContainer");
+         resepData.forEach((resep) => {
+           resepContainer.innerHTML += tampilkanResep(resep);
+         });
+            </script>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('lihat-selengkapnya')) {
+            const button = event.target;
+            const paragraph = button.previousElementSibling;
+            if (paragraph.classList.contains('line-clamp-2')) {
+                // Tampilkan teks penuh
+                paragraph.classList.remove('line-clamp-2');
+                button.textContent = 'Sembunyikan';
+            } else {
+                // Potong kembali teks
+                paragraph.classList.add('line-clamp-2');
+                button.textContent = 'Lihat Selengkapnya';
+            }
+        }
+    });
+    </script>
+  </body>
+</html>

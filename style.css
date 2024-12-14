@@ -72,6 +72,12 @@ html, body {
     background-size: contain;
     background-position: center;
 }
+.post-icon{
+    background-image: url(assets/photo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 .simpan{
     background-image: url(assets/simpan.svg);
     background-repeat: no-repeat;

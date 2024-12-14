@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoRes</title>
+    <link rel="shortcut icon" href="../assets/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prociono&display=swap" rel="stylesheet">
+    <script src="../component.js"></script>
+  </head>
+  <body class="min-h-dvh">
+    <div class="relative">
+      <div class="w-full mx-auto ">
+        <aside id="sidebar-login" class="fixed z-50">
+         
+        </aside>
+        <nav id="navbar-nofilter" class="flex fixed z-10 w-full flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[22px] px-[15px] py-2.5 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#c9c9c9]">
+        </nav>
+        <div
+          class="flex flex-col pt-20 px-2 mb-10 mx-auto justify-start items-center max-w-[562px] w-full left-0 top-0 gap-1.5"
+        >
+        <select
+          class="rounded px-2 bg-[#FE005C] py-1 text-lg w-full text-white focus:outline-none"
+          onchange="navigateToPage(this)"
+        >
+        <option value="dashkomen.html">Moderasi Komentar</option>
+        <option value="dashpost.html">Moderasi Postingan</option>
+        </select>
+        <script>
+            function navigateToPage(selectElement) {
+                const selectedValue = selectElement.value; // Ambil nilai yang dipilih
+                if (selectedValue) {
+                    window.location.href = selectedValue; // Arahkan ke halaman yang sesuai
+                }
+            }
+        </script>
+        <div class="max-w-3xl mx-auto bg-white p-4 rounded-md ">
+            <div
+              class="flex justify-between items-center border-b border-gray-300 pb-3 mb-3"
+            >
+              <h2 class="text-lg font-bold text-gray-700">Moderasi Komentar</h2>
+              <button
+                class="bg-pink-500 hover:bg-pink-600 text-white py-1 px-3 rounded"
+              >
+                Pending (0)
+              </button>
+            </div>
+      
+            <!-- Filter Options -->
+            <div class="flex flex-col gap-1 text-sm text-gray-500 mb-4">
+              <div>
+                <label class="inline-flex items-center space-x-1">
+                  <input
+                    type="radio"
+                    name="status"
+                    class="form-checkbox rounded text-pink-600"
+                    checked
+                  />
+                  <span>Approved</span>
+                </label>
+                <label class="inline-flex items-center ml-3 space-x-1">
+                  <input
+                    type="radio"
+                    name="status"
+                    class=" rounded text-pink-600"
+                  />
+                  <span>Deleted</span>
+                </label>
+                <label class="inline-flex items-center ml-3 space-x-1">
+                  <input
+                    type="radio"
+                    name="status"
+                    class=" rounded text-pink-600"
+                  />
+                  <span>All</span>
+                </label>
+                <label class="inline-flex items-center ml-3 space-x-1">
+                  <input
+                    type="radio"
+                    name="status"
+                    class=" rounded text-pink-600"
+                  />
+                  <span>Pending</span>
+                </label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <select
+                  class="border rounded px-2 py-1 text-sm focus:outline-none"
+                >
+                  <option>Sekarang</option>
+                  <option>Setahun lalu</option>
+                  <option>Seminggu lalu</option>
+                  <option>Sehari lalu</option>
+                </select>
+                <select
+                  class="border rounded px-2 py-1 text-sm focus:outline-none"
+                >
+                  <option>Terbaru</option>
+                  <option>Paling lama</option>
+                </select>
+              </div>
+            </div>
+      
+            <!-- Komentar Card -->
+            <div
+              class="space-y-4"
+            >
+              <!-- Komentar 1 -->
+              <div
+                class="bg-pink-50 p-4 rounded-md border border-pink-200"
+              >
+                <div class="flex justify-between items-center">
+                  <a href="detailpost.html" class="font-semibold text-blue-800">
+                    Rendang Daging Khas Padang
+                  </a>
+                  <span
+                    class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full"
+                  >
+                    Tidak ada masalah
+                  </span>
+                </div>
+                <div class="mt-2 text-gray-600 flex flex-col gap-2 text-sm">
+                  <span>
+                    <p class="font-medium">Dibya Setiaji</p>
+                    <p>dibya311@gmail.com</p>
+                  </span>
+                  <span>
+                    <p class="line-clamp-2">Resep ini kurang enak Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo assumenda dolorem iure sequi illo dignissimos, sit nostrum animi unde perferendis delectus enim saepe sapiente et hic molestiae. Assumenda, atque?</p>
+                    <button class="text-gray-400 lihat-selengkapnya">Lihat selengkapnya</button>
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 mt-3 text-gray-500 text-xs"
+                >
+                  <button
+                    class="flex gap-1 items-center text-gray-600 hover:text-gray-800"
+                  >
+                  <span class="up-icon w-3 h-3 bg-gray-500"></span>
+                  <p>0</p>
+                  </button>
+                </div>
+                <div
+                  class="mt-2 flex space-x-2"
+                >
+                  <button
+                    class="border text-gray-700 bg-white px-3 py-1 rounded hover:text-white hover:bg-green-600 text-xs"
+                  >
+                    Approve
+                  </button>
+                  <button
+                    class="border text-gray-700 bg-white px-3 py-1 rounded hover:text-white hover:bg-red-600 text-xs"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-pink-50 p-4 rounded-md border border-pink-200"
+              >
+                <div class="flex justify-between items-center">
+                  <a href="detailpost.html" class="font-semibold text-blue-800">
+                    Rendang Daging Khas Padang
+                  </a>
+                  <span
+                    class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full"
+                  >
+                    Tidak ada masalah
+                  </span>
+                </div>
+                <div class="mt-2 text-gray-600 flex flex-col gap-2 text-sm">
+                  <span>
+                    <p class="font-medium">Dibya Setiaji</p>
+                    <p>dibya311@gmail.com</p>
+                  </span>
+                  <span>
+                    <p class="line-clamp-2">Resep ini kurang enak Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo assumenda dolorem iure sequi illo dignissimos, sit nostrum animi unde perferendis delectus enim saepe sapiente et hic molestiae. Assumenda, atque?</p>
+                    <button class="text-gray-400 lihat-selengkapnya">Lihat selengkapnya</button>
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 mt-3 text-gray-500 text-xs"
+                >
+                  <button
+                    class="flex gap-1 items-center text-gray-600 hover:text-gray-800"
+                  >
+                  <span class="up-icon w-3 h-3 bg-gray-500"></span>
+                  <p>0</p>
+                  </button>
+                </div>
+                <div
+                  class="mt-2 flex space-x-2"
+                >
+                  <button
+                    class="border text-gray-700 bg-white px-3 py-1 rounded hover:text-white hover:bg-green-600 text-xs"
+                  >
+                    Approve
+                  </button>
+                  <button
+                    class="border text-gray-700 bg-white px-3 py-1 rounded hover:text-white hover:bg-red-600 text-xs"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-pink-50 p-4 rounded-md border border-pink-200"
+              >
+                <div class="flex justify-between items-center">
+                  <a href="detailpost.html" class="font-semibold text-blue-800">
+                    Rendang Daging Khas Padang
+                  </a>
+                  <span
+                    class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full"
+                  >
+                    Tidak ada masalah
+                  </span>
+                </div>
+                <div class="mt-2 text-gray-600 flex flex-col gap-2 text-sm">
+                  <span>
+                    <p class="font-medium">Dibya Setiaji</p>
+                    <p>dibya311@gmail.com</p>
+                  </span>
+                  <span>
+                    <p class="line-clamp-2">Resep ini kurang enak Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo assumenda dolorem iure sequi illo dignissimos, sit nostrum animi unde perferendis delectus enim saepe sapiente et hic molestiae. Assumenda, atque?</p>
+                    <button class="text-gray-400 lihat-selengkapnya">Lihat selengkapnya</button>
+                  </span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 mt-3 text-gray-500 text-xs"
+                >
+                  <button
+                    class="flex gap-1 items-center text-gray-600 hover:text-gray-800"
+                  >
+                  <span class="up-icon w-3 h-3 bg-gray-500"></span>
+                  <p>0</p>
+                  </button>
+                </div>
+                <div
+                  class="mt-2 flex space-x-2"
+                >
+                  <button
+                    class="border text-gray-700 bg-white px-3 py-1 rounded hover:text-white hover:bg-green-600 text-xs"
+                  >
+                    Approve
+                  </button>
+                  <button
+                    class="border text-gray-700 bg-white px-3 py-1 rounded hover:text-white hover:bg-red-600 text-xs"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+      
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('lihat-selengkapnya')) {
+            const button = event.target;
+            const paragraph = button.previousElementSibling;
+            if (paragraph.classList.contains('line-clamp-2')) {
+                // Tampilkan teks penuh
+                paragraph.classList.remove('line-clamp-2');
+                button.textContent = 'Sembunyikan';
+            } else {
+                // Potong kembali teks
+                paragraph.classList.add('line-clamp-2');
+                button.textContent = 'Lihat Selengkapnya';
+            }
+        }
+    });
+    </script>
+  </body>
+</html>
